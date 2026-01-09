@@ -55,4 +55,4 @@ Si deseas correr este portafolio en tu máquina local, sigue estos pasos:
 
 ---
 **Autor:** Piero Cordova
-*Conecta conmigo en [LinkedIn](https://www.linkedin.com/)* (¡Recuerda poner tu link aquí!)
+*Conecta conmigo en [LinkedIn](https://www.linkedin.com/)* 
