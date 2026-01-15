@@ -3,3 +3,4 @@ pandas
 sqlalchemy
 plotly
 psycopg2-binary
+streamlit-option-menu
