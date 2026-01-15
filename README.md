@@ -1,4 +1,5 @@
 # 🚀 Portafolio Data Engineer & Data Analyst
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://pjcordova-portafolio.streamlit.app)
 
 Bienvenido a mi portafolio profesional. Este repositorio aloja una aplicación web interactiva desarrollada con **Python** y **Streamlit** que centraliza mis proyectos, habilidades técnicas y experiencia en ingeniería y análisis de datos.
 
