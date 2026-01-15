@@ -272,28 +272,55 @@ elif menu == "🏭 Proy 1: ERP Data Warehouse":
 # ==========================================
 # 📈 PROYECTO 2: PERU MARKET PREDICTOR
 # ==========================================
-elif menu == "📈 Proy 2: Peru Market Predictor":
-    st.title("📈 Peru Market Predictor")
-    st.markdown('<span class="tech-badge">Machine Learning</span> <span class="tech-badge">Scikit-Learn</span>',
-                unsafe_allow_html=True)
+elif selected == "Proy 2: Peru Market Predictor":
+    st.title("📈 Tendencias del Mercado Peruano")
+    st.markdown("""
+    Esta sección visualiza datos reales almacenados en la nube (**Supabase**).
+    Demuestra la capacidad de realizar consultas SQL (`SELECT`) y renderizar series de tiempo.
+    """)
 
-    col_img, col_txt = st.columns([1, 1])
-    with col_txt:
-        st.write(
-            "Sistema de predicción financiera diseñado para el mercado peruano usando Regresión Lineal.")
-        st.link_button(
-            "Ver Código", "https://github.com/pjcordova/peru-market-predictor")
+    # 1. Traer datos reales de la BD
+    try:
+        query_market = "SELECT fecha, categoria, valor FROM mercado_peru ORDER BY fecha;"
+        df_market = run_query(query_market)
 
-    with col_img:
-        try:
-            st.image("assets/market_preview.png", use_container_width=True)
-        except:
-            fechas = pd.date_range(start='2024-01-01', periods=30)
-            valores = [3.7 + (x * 0.01) for x in range(30)]
-            df_dummy = pd.DataFrame({'Fecha': fechas, 'Predicción': valores})
-            fig = px.line(df_dummy, x='Fecha', y='Predicción',
-                          template="plotly_dark")
-            st.plotly_chart(fig, use_container_width=True)
+        if df_market.empty:
+            st.warning(
+                "⚠️ La consulta no devolvió datos. Revisa si insertaste las filas en Supabase.")
+        else:
+            # 2. Asegurar formato de fecha
+            df_market['fecha'] = pd.to_datetime(df_market['fecha'])
+
+            # 3. Métricas calculadas en Python
+            total_valor = df_market['valor'].sum()
+            promedio_valor = df_market['valor'].mean()
+
+            col1, col2, col3 = st.columns(3)
+            col1.metric("Registros Totales", len(df_market))
+            col2.metric("Valor Total Mercado", f"S/ {total_valor:,.2f}")
+            col3.metric("Ticket Promedio", f"S/ {promedio_valor:,.2f}")
+
+            # 4. Gráfico Interactivo
+            tab1, tab2 = st.tabs(["📊 Gráfico de Líneas", "📋 Datos Crudos"])
+
+            with tab1:
+                fig_market = px.line(
+                    df_market,
+                    x='fecha',
+                    y='valor',
+                    color='categoria',
+                    markers=True,
+                    title="Evolución de Ventas por Categoría",
+                    labels={'valor': 'Monto (PEN)',
+                            'fecha': 'Fecha de Registro'}
+                )
+                st.plotly_chart(fig_market, use_container_width=True)
+
+            with tab2:
+                st.dataframe(df_market, use_container_width=True)
+
+    except Exception as e:
+        st.error(f"Error al conectar con la base de datos: {e}")
 
 # ==========================================
 # 🛒 PROYECTO 3: RETAIL INVENTORY
