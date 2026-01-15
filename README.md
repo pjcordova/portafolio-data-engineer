@@ -36,10 +36,10 @@ Va más allá de un dashboard tradicional: es un sistema inteligente que conecta
 
 ```mermaid
 graph LR
-A[Usuario] -- HTTPS --> B(Streamlit App)
-B -- SQL Query --> C[(Supabase DB)]
-C -- Datos Históricos --> B
-B -- Pandas --> D{Motor ML (Scikit-Learn)}
-D -- Entrenamiento --> E[Modelo Regresión Lineal]
-E -- Predicción (30 días) --> F[Gráfico Forecast]
-F --> A
+    A["Usuario"] -- HTTPS --> B("Streamlit App")
+    B -- SQL Query --> C[("Supabase DB")]
+    C -- Datos Históricos --> B
+    B -- Pandas --> D{"Motor ML (Scikit-Learn)"}
+    D -- Entrenamiento --> E["Modelo Regresión Lineal"]
+    E -- Predicción 30 días --> F["Gráfico Forecast"]
+    F --> A
