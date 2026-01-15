@@ -1,59 +1,41 @@
-# 🚀 Portafolio Data Engineer & Data Analyst
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://pjcordova-portafolio.streamlit.app)
+# 🚀 Portafolio de Ingeniería de Datos (Full Stack)
 
-Bienvenido a mi portafolio profesional. Este repositorio aloja una aplicación web interactiva desarrollada con **Python** y **Streamlit** que centraliza mis proyectos, habilidades técnicas y experiencia en ingeniería y análisis de datos.
+![Streamlit](https://img.shields.io/badge/Frontend-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit)
+![Python](https://img.shields.io/badge/Backend-Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Supabase](https://img.shields.io/badge/Database-Supabase-3ECF8E?style=for-the-badge&logo=supabase)
+![Status](https://img.shields.io/badge/Status-Desplegado-success?style=for-the-badge)
+
+> **Link al Demo en Vivo:** [https://pjcordova-portafolio.streamlit.app](https://pjcordova-portafolio.streamlit.app)
 
 ## 📋 Descripción
+Este proyecto es una demostración práctica de un ciclo de vida completo del dato (**End-to-End Data Engineering**). 
 
-El objetivo de este proyecto es demostrar habilidades prácticas en:
-* **Desarrollo Full Stack de Datos:** Creación de interfaces interactivas para presentar insights.
-* **Visualización de Datos:** Integración de dashboards (Power BI) y gráficos en tiempo real.
-* **Modelado de Datos:** Diseño de esquemas y diagramas entidad-relación (ER).
-* **Gestión de Proyectos:** Documentación y presentación profesional de CV y recursos.
+No es solo una página web estática; es un sistema centralizado que:
+1.  **Conecta** a una base de datos en la nube (**PostgreSQL** en Supabase) en tiempo real.
+2.  **Procesa** datos crudos utilizando Python y Pandas.
+3.  **Visualiza** insights de negocio mediante dashboards interactivos.
 
-## 🛠️ Tecnologías Utilizadas
-
-* **Lenguaje:** Python 3.10+
-* **Framework Web:** Streamlit
-* **Visualización:** Power BI (imágenes estáticas/integración), Matplotlib/Plotly (si aplica).
-* **Control de Versiones:** Git & GitHub
-
-## 📂 Estructura del Proyecto
-
-* `app.py`: Punto de entrada de la aplicación Streamlit.
-* `assets/`: Recursos estáticos (imágenes de dashboards, diagramas ER, foto de perfil).
-* `cv_piero.pdf`: Hoja de vida descargable.
-* `requirements.txt`: Lista de dependencias necesarias para ejecutar el entorno.
-
-## 🚀 Instrucciones de Ejecución Local
-
-Si deseas correr este portafolio en tu máquina local, sigue estos pasos:
-
-1.  **Clonar el repositorio:**
-    ```bash
-    git clone [https://github.com/pjcordova/portafolio-data-engineer.git](https://github.com/pjcordova/portafolio-data-engineer.git)
-    cd portafolio-data-engineer
-    ```
-
-2.  **Crear y activar un entorno virtual (Opcional pero recomendado):**
-    ```bash
-    python -m venv venv
-    # En Windows:
-    venv\Scripts\activate
-    # En Mac/Linux:
-    source venv/bin/activate
-    ```
-
-3.  **Instalar dependencias:**
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-4.  **Ejecutar la aplicación:**
-    ```bash
-    streamlit run app.py
-    ```
+El objetivo es demostrar la capacidad de construir infraestructuras de datos escalables, seguras y orientadas a la toma de decisiones.
 
 ---
-**Autor:** Piero Cordova
-*Conecta conmigo en [LinkedIn](https://www.linkedin.com/)* 
+
+## 🛠️ Stack Tecnológico
+
+| Componente | Tecnología | Uso en el Proyecto |
+| :--- | :--- | :--- |
+| **Frontend** | Streamlit | Interfaz de usuario interactiva. |
+| **Backend** | Python 3.10+ | Lógica de negocio y conexión a BD. |
+| **Base de Datos** | Supabase (PostgreSQL) | Almacenamiento persistente en la nube. |
+| **Visualización** | Plotly & Power BI | Gráficos dinámicos y dashboards embebidos. |
+| **Deploy** | Streamlit Cloud | CI/CD y despliegue automatizado desde GitHub. |
+
+---
+
+## 🏗️ Arquitectura del Sistema
+
+```mermaid
+graph LR
+A[Usuario] -- HTTPS --> B(Streamlit App)
+B -- Query SQL --> C[(Supabase DB)]
+C -- Datos --> B
+B -- Procesamiento Pandas --> D[Dashboard Interactivo]
