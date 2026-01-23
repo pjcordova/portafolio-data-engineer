@@ -68,21 +68,3 @@ graph LR
     end
 
     B -- Resultados Visuales --> A
-
-📦 Instalación Local
-Si deseas correr este proyecto en tu máquina:
-
-Clonar el repositorio:
-
-Bash
-git clone [https://github.com/pjcordova/portafolio-data-engineer.git](https://github.com/pjcordova/portafolio-data-engineer.git)
-Instalar dependencias:
-
-Bash
-pip install -r requirements.txt
-Ejecutar la aplicación:
-
-Bash
-streamlit run app.py
-
-Desarrollado por Piero Cordova | Data Engineer & ML Enthusiast
