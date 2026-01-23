@@ -70,9 +70,10 @@ with st.sidebar:
             "Proy 1: ERP Data Warehouse",
             "Proy 2: Peru Market Predictor",
             "Proy 3: Retail Inventory",
+            "Proy 4: Churn Prediction",
             "Contacto"
         ],
-        icons=["house", "database", "graph-up-arrow", "cart", "envelope"],
+        icons=["house", "database", "graph-up-arrow", "cart", "people", "envelope"],
         menu_icon="cast",
         default_index=0,
         styles={
@@ -295,6 +296,105 @@ elif selected == "Proy 3: Retail Inventory":
     except:
         st.warning(
             "⚠️ Falta la imagen: Sube una captura llamada 'dashboard_pbi.png' a la carpeta assets.")
+        
+# ==========================================
+# 👥 PROYECTO 4: PREDICCIÓN DE FUGA (CHURN)
+# ==========================================
+elif selected == "Proy 4: Churn Prediction":
+    st.title("⚡ Predicción de Retención de Clientes")
+    st.markdown("""
+    <div style="background-color: #1e2530; padding: 15px; border-radius: 10px; border-left: 5px solid #ff4b4b;">
+        Este modelo de Inteligencia Artificial analiza el perfil del cliente y calcula la probabilidad 
+        de que cancele su servicio el próximo mes.
+    </div>
+    """, unsafe_allow_html=True)
+
+    # --- 1. CARGAR EL MODELO ---
+    import joblib
+
+    @st.cache_resource
+    def cargar_modelo():
+        try:
+            return joblib.load('models/modelo_churn.pkl')
+        except FileNotFoundError:
+            return None
+
+    model = cargar_modelo()
+
+    if model is None:
+        st.error("⚠️ Error: No se encuentra el archivo 'models/modelo_churn.pkl'.")
+        st.stop()
+
+    # --- 2. FORMULARIO DE DATOS ---
+    st.subheader("👤 Perfil del Cliente")
+
+    c1, c2, c3 = st.columns(3)
+
+    with c1:
+        tenure = st.slider("Meses de Antigüedad", 0, 72, 12)
+        monthly_charges = st.number_input("Pago Mensual ($)", 0.0, 200.0, 70.0)
+
+    with c2:
+        contract = st.selectbox("Tipo de Contrato", [
+                                "Month-to-month", "One year", "Two year"])
+        paperless = st.selectbox("Facturación Digital", ["Yes", "No"])
+
+    with c3:
+        payment = st.selectbox("Método de Pago", [
+            "Electronic check", "Mailed check", "Bank transfer (automatic)", "Credit card (automatic)"
+        ])
+
+    # --- 3. PROCESAMIENTO ---
+    if st.button("Calcular Probabilidad de Fuga", type="primary"):
+
+        # Mapeo manual para asegurar que coincida EXACTAMENTE con el entrenamiento
+        datos = {
+            'tenure': tenure,
+            'MonthlyCharges': monthly_charges,
+            'PaperlessBilling': 1 if paperless == "Yes" else 0,
+
+            # One-Hot Encoding (Manual)
+            'Contract_Month-to-month': 1 if contract == "Month-to-month" else 0,
+            'Contract_One year': 1 if contract == "One year" else 0,
+            'Contract_Two year': 1 if contract == "Two year" else 0,
+
+            'PaymentMethod_Bank transfer (automatic)': 1 if payment == "Bank transfer (automatic)" else 0,
+            'PaymentMethod_Credit card (automatic)': 1 if payment == "Credit card (automatic)" else 0,
+            'PaymentMethod_Electronic check': 1 if payment == "Electronic check" else 0,
+            'PaymentMethod_Mailed check': 1 if payment == "Mailed check" else 0
+        }
+
+        # Convertir a DataFrame con el orden correcto de columnas
+        # OJO: El orden debe ser el mismo que en X_train.columns
+        columnas_ordenadas = [
+            'tenure', 'MonthlyCharges', 'PaperlessBilling',
+            'Contract_Month-to-month', 'Contract_One year', 'Contract_Two year',
+            'PaymentMethod_Bank transfer (automatic)', 'PaymentMethod_Credit card (automatic)',
+            'PaymentMethod_Electronic check', 'PaymentMethod_Mailed check'
+        ]
+
+        df_pred = pd.DataFrame([datos])[columnas_ordenadas]
+
+        # --- 4. PREDICCIÓN ---
+        try:
+            probabilidad = model.predict_proba(
+                df_pred)[0][1]  # Probabilidad de fuga
+
+            st.markdown("---")
+            col_res1, col_res2 = st.columns([1, 2])
+
+            with col_res1:
+                st.metric("Probabilidad de Fuga", f"{probabilidad:.1%}")
+
+            with col_res2:
+                if probabilidad > 0.5:
+                    st.error("🚨 **ALTO RIESGO DETECTADO**")
+                    st.write("El modelo sugiere intervenir inmediatamente.")
+                else:
+                    st.success("✅ **CLIENTE SEGURO**")
+                    st.write("El cliente muestra un comportamiento leal.")
+        except Exception as e:
+            st.error(f"Error al predecir: {e}")
 
 # ==========================================
 # 📬 PÁGINA: CONTACTO
