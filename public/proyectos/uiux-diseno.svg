@@ -1,0 +1,33 @@
+<svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-uiux" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FDF2F8"/>
+      <stop offset="100%" stop-color="#F5F3FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="240" fill="url(#bg-uiux)"/>
+
+  <g opacity="0.9">
+    <rect x="70" y="55" width="110" height="80" rx="10" fill="#FBCFE8" transform="rotate(-6 125 95)"/>
+    <rect x="110" y="75" width="110" height="80" rx="10" fill="#DDD6FE" transform="rotate(4 165 115)"/>
+    <rect x="90" y="90" width="110" height="80" rx="10" fill="#FFFFFF" stroke="#A78BFA" stroke-width="2"/>
+  </g>
+  <g stroke="#7C3AED" stroke-width="2" stroke-linecap="round">
+    <line x1="105" y1="112" x2="175" y2="112"/>
+    <line x1="105" y1="128" x2="160" y2="128"/>
+    <line x1="105" y1="144" x2="145" y2="144"/>
+  </g>
+
+  <g transform="translate(255,55)">
+    <path d="M0 0 h30 a20 20 0 0 1 0 40 h-30 z" fill="#F472B6"/>
+    <path d="M0 40 h30 a20 20 0 0 1 0 40 h-30 z" fill="#A78BFA"/>
+    <path d="M0 80 h30 a20 20 0 1 1 0 40 h-30 z" fill="#60A5FA"/>
+    <circle cx="30" cy="20" r="20" fill="#FBBF24" opacity="0.85"/>
+  </g>
+
+  <g fill="#7C3AED" opacity="0.6">
+    <circle cx="55" cy="170" r="4"/>
+    <circle cx="70" cy="185" r="3"/>
+    <circle cx="340" cy="180" r="3"/>
+  </g>
+</svg>

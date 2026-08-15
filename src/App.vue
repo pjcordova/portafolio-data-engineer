@@ -11,7 +11,7 @@ const fetchProjects = async () => {
     loading.value = true;
     const { data, error } = await supabase
       .from('proyectos')
-      .select('nombre, cliente, categoria_solucion, problema_resuelto, metrica_impacto, tecnologias, status, link_demo, link_figma');
+      .select('nombre, cliente, categoria_solucion, problema_resuelto, metrica_impacto, tecnologias, status, link_demo, link_figma, imagen_url');
 
     if (error) throw error;
     projects.value = data || [];

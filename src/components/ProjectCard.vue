@@ -9,6 +9,7 @@ interface Project {
   status: string;
   link_demo?: string;
   link_figma?: string;
+  imagen_url?: string;
 }
 
 defineProps<{
@@ -18,9 +19,13 @@ defineProps<{
 
 <template>
   <div class="group bg-white border border-slate-200 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col md:flex-row">
-    <!-- Visual Accent Side -->
-    <div class="w-full md:w-2 bg-slate-900 group-hover:bg-blue-600 transition-colors"></div>
-    
+    <!-- Referential Image -->
+    <img v-if="project.imagen_url"
+         :src="project.imagen_url"
+         :alt="`Ilustración referencial: ${project.nombre}`"
+         class="w-full md:w-72 h-48 md:h-auto object-cover flex-shrink-0" />
+    <div v-else class="hidden md:block w-2 bg-slate-900 group-hover:bg-blue-600 transition-colors flex-shrink-0"></div>
+
     <div class="p-8 flex-1">
       <div class="flex flex-wrap justify-between items-start mb-4 gap-4">
         <div>

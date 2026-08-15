@@ -1,0 +1,40 @@
+<svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-ia" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#312E81"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="240" fill="url(#bg-ia)"/>
+
+  <g stroke="#A5B4FC" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="45" y="60" width="80" height="100" rx="6" fill="#1E1B4B"/>
+    <line x1="60" y1="80" x2="110" y2="80"/>
+    <line x1="60" y1="95" x2="110" y2="95"/>
+    <line x1="60" y1="110" x2="95" y2="110"/>
+    <path d="M62 135 h15 l6 12 h20" stroke="#818CF8"/>
+  </g>
+
+  <g stroke="#818CF8" stroke-width="2" stroke-dasharray="5 5">
+    <path d="M130 105 h90"/>
+  </g>
+  <path d="M210 105 l-8 -5 v10 z" fill="#818CF8"/>
+
+  <g transform="translate(240,55)">
+    <rect x="0" y="0" width="110" height="110" rx="14" fill="#312E81" stroke="#6366F1" stroke-width="2"/>
+    <circle cx="55" cy="55" r="28" fill="none" stroke="#C7D2FE" stroke-width="2.5"/>
+    <circle cx="55" cy="55" r="10" fill="#C7D2FE"/>
+    <g stroke="#C7D2FE" stroke-width="2.5">
+      <line x1="55" y1="12" x2="55" y2="24"/>
+      <line x1="55" y1="86" x2="55" y2="98"/>
+      <line x1="12" y1="55" x2="24" y2="55"/>
+      <line x1="86" y1="55" x2="98" y2="55"/>
+    </g>
+  </g>
+
+  <g fill="#4F46E5" opacity="0.5">
+    <circle cx="350" cy="190" r="3"/>
+    <circle cx="365" cy="180" r="2"/>
+    <circle cx="30" cy="190" r="3"/>
+  </g>
+</svg>
