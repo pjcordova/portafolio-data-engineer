@@ -1,70 +1,61 @@
-# 🚀 Portafolio de Ingeniería de Datos & ML (Full Stack)
+# Cordova Solutions
 
-![Streamlit](https://img.shields.io/badge/Frontend-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit)
-![Python](https://img.shields.io/badge/Backend-Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Vue](https://img.shields.io/badge/Frontend-Vue%203-4FC08D?style=for-the-badge&logo=vuedotjs&logoColor=white)
+![TypeScript](https://img.shields.io/badge/Lang-TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Build-Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Styles-TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
 ![Supabase](https://img.shields.io/badge/Database-Supabase-3ECF8E?style=for-the-badge&logo=supabase)
-![Scikit-Learn](https://img.shields.io/badge/AI-Scikit%20Learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)
-
-> **Link al Demo en Vivo:** [https://pjcordova-portafolio.streamlit.app](https://pjcordova-portafolio.streamlit.app)
+![Vercel](https://img.shields.io/badge/Hosting-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
 ## 📋 Descripción
-Este proyecto es una demostración práctica de una arquitectura de datos moderna (**End-to-End Data Engineering**).
 
-Va más allá de un dashboard tradicional: es un sistema inteligente que centraliza operaciones de datos. Conecta bases de datos en la nube para análisis histórico y despliega modelos de **Machine Learning (IA)** para anticipar eventos futuros, como tendencias de ventas y comportamiento de clientes.
+Sitio corporativo de **Cordova Solutions**, desarrollado en Vue 3 + Tailwind CSS, que presenta casos de éxito reales en desarrollo Full Stack, ERPs, e-commerce y soluciones cloud.
 
-### 💡 Características Clave:
-1.  **Data Warehouse Cloud:** Conexión en tiempo real a **Supabase (PostgreSQL)**.
-2.  **ETL Pipeline:** Extracción, limpieza y transformación de datos con Pandas.
-3.  **Sales Forecasting:** Predicción de ventas futuras mediante **Regresión Lineal**.
-4.  **Churn Prediction (Nuevo):** Sistema de clasificación con **Random Forest** para detectar clientes en riesgo de fuga.
-5.  **Interactive Dashboard:** Visualización avanzada con Plotly y Streamlit.
-
----
+Los proyectos mostrados en la sección "Casos de Éxito" **no están hardcodeados**: se consultan en tiempo real desde una tabla `proyectos` en Supabase (PostgreSQL), lo que permite actualizar el portafolio sin volver a desplegar el sitio.
 
 ## 🛠️ Stack Tecnológico
 
 | Componente | Tecnología | Uso en el Proyecto |
 | :--- | :--- | :--- |
-| **Frontend** | Streamlit | UI Interactiva, navegación y formularios dinámicos. |
-| **Backend** | Python 3.10+ | Lógica de negocio, orquestación y carga de modelos. |
-| **Database** | Supabase (PostgreSQL) | Almacenamiento persistente y relacional. |
-| **AI / ML** | Scikit-Learn | Entrenamiento de modelos (Regresión y Clasificación). |
-| **Persistencia** | Joblib | Serialización de modelos entrenados (.pkl). |
-| **Viz** | Plotly Express | Gráficos interactivos y series de tiempo. |
+| **Frontend** | Vue 3 + Vite + TypeScript | SPA con composición reactiva y tipado estático. |
+| **Estilos** | Tailwind CSS | Sistema de diseño utilitario, responsive. |
+| **Base de Datos** | Supabase (PostgreSQL) | Fuente de verdad de los proyectos mostrados. |
+| **Cliente DB** | `@supabase/supabase-js` | Consulta de la tabla `proyectos` vía API REST/anon key. |
+| **Hosting** | Vercel | Build estático (`vite build`) con despliegue continuo. |
 
----
+## 🚀 Desarrollo Local
 
-## 🧩 Módulos del Portafolio
+```bash
+npm install
+cp .env.example .env   # completa VITE_SUPABASE_URL y VITE_SUPABASE_ANON_KEY
+npm run dev
+```
 
-### 🔹 Proyecto 1-3: Análisis de Retail & Inventario
-Sistema conectado a Base de Datos para gestión de inventarios y predicción de mercado peruano.
-* **Tech:** SQL, Pandas, Plotly.
-* **Impacto:** Optimización de stock basada en datos históricos.
+Build de producción:
 
-### 🔹 Proyecto 4: Predicción de Fuga de Clientes (Churn) 🧠
-Modelo de Inteligencia Artificial diseñado para retención de clientes en telecomunicaciones.
-* **Modelo:** Random Forest Classifier.
-* **Métrica:** 77.5% Accuracy.
-* **Input:** El usuario ingresa datos (Contrato, Pagos, Antigüedad) en tiempo real.
-* **Output:** Probabilidad de abandono (%) y alerta de riesgo.
+```bash
+npm run build
+npm run preview
+```
 
----
+## 🗄️ Estructura de datos (`proyectos`)
 
-## 🏗️ Arquitectura del Sistema
+Cada fila representa un caso de éxito mostrado en el sitio:
 
-```mermaid
-graph LR
-    A["Usuario"] -- Interactúa --> B("Streamlit App")
-    
-    subgraph "Capa de Datos (Data Layer)"
-    B -- SQL Query --> C[("Supabase DB")]
-    C -- Datos Históricos --> B
-    end
-    
-    subgraph "Capa de Inteligencia (ML Layer)"
-    B -- Input Usuario --> D{"Preprocesamiento"}
-    D -- Features --> E["Modelo .pkl (Random Forest)"]
-    E -- Inferencia --> B
-    end
+| Columna | Descripción |
+| :--- | :--- |
+| `nombre` | Nombre del proyecto |
+| `cliente` | Cliente o "Uso interno" |
+| `categoria_solucion` | Categoría (E-commerce, ERP, EdTech, etc.) |
+| `problema_resuelto` | Descripción del problema que resuelve |
+| `metrica_impacto` | Resultado/impacto medible (opcional) |
+| `tecnologias` | Array de tecnologías usadas |
+| `status` | `Completado` / `En Progreso` |
+| `link_demo` | URL del demo en vivo (opcional) |
+| `link_figma` | URL del diseño en Figma (opcional) |
 
-    B -- Resultados Visuales --> A
+## 🌐 Contacto
+
+* **Email:** cordova23piero@gmail.com
+* **LinkedIn:** [Piero Cordova](https://www.linkedin.com/in/piero-cordova-cerna-5a9886318/)
+* **GitHub:** [pjcordova](https://github.com/pjcordova)
