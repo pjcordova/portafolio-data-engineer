@@ -33,7 +33,7 @@ onMounted(() => {
     <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
       <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <div class="text-xl font-bold tracking-tighter text-[#0F172A]">
-          PIERO CORDOVA<span class="text-blue-600">.</span>
+          CORDOVA SOLUTIONS<span class="text-blue-600">.</span>
         </div>
         <div class="hidden md:flex gap-8 text-sm font-medium">
           <a href="#metodologia" class="hover:text-blue-600 transition-colors">Metodología</a>
@@ -51,7 +51,7 @@ onMounted(() => {
             Transformo procesos complejos en <span class="text-blue-600">soluciones digitales</span> rentables.
           </h1>
           <p class="text-xl md:text-2xl text-slate-500 mb-10 leading-relaxed font-light">
-            Ing. Piero Cordova | Desarrollador Full Stack Especializado en E-commerce, ERPs y Soluciones Cloud.
+            Cordova Solutions | Desarrollo Full Stack Especializado en E-commerce, ERPs y Soluciones Cloud.
           </p>
           <div class="flex flex-wrap gap-4">
             <a href="#proyectos" 
@@ -175,7 +175,7 @@ onMounted(() => {
         </div>
         
         <div class="mt-20 pt-8 border-t border-slate-800 text-center text-slate-500 text-sm">
-          <p>© 2026 Ing. Piero Cordova. Todos los derechos reservados.</p>
+          <p>© 2026 Cordova Solutions. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>
