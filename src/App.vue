@@ -1,17 +1,22 @@
 <script setup lang="ts">
-import { onMounted, onBeforeUnmount, ref, watch } from 'vue';
+import { onMounted, onBeforeUnmount, nextTick, ref, watch } from 'vue';
 import { projects, type Project } from './data/projects';
 import ProjectCard from './components/ProjectCard.vue';
 import ProjectGalleryCard from './components/ProjectGalleryCard.vue';
 
 const menuOpen = ref(false);
 const selectedProject = ref<Project | null>(null);
+const closeButtonRef = ref<HTMLButtonElement | null>(null);
+let lastFocused: HTMLElement | null = null;
 
 function openProject(project: Project) {
+  lastFocused = document.activeElement as HTMLElement;
   selectedProject.value = project;
+  nextTick(() => closeButtonRef.value?.focus());
 }
 function closeProject() {
   selectedProject.value = null;
+  lastFocused?.focus();
 }
 
 watch(selectedProject, (project) => {
@@ -166,7 +171,7 @@ onBeforeUnmount(() => {
            aria-modal="true"
            @click.self="closeProject">
         <div class="relative w-full sm:max-w-3xl bg-paper sm:rounded-2xl shadow-2xl my-0 sm:my-auto">
-          <button type="button"
+          <button ref="closeButtonRef" type="button"
                   class="btn-press absolute -top-3 -right-3 sm:top-4 sm:right-4 w-10 h-10 rounded-full bg-ink text-paper flex items-center justify-center shadow-lg z-10"
                   aria-label="Cerrar"
                   @click="closeProject">
