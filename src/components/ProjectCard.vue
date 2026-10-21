@@ -43,6 +43,16 @@ defineProps<{
           </ol>
         </div>
 
+        <div v-if="project.resultados?.length" class="mb-6 bg-slate-50 border border-slate-100 rounded-lg p-4">
+          <h4 class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-2">Resultados</h4>
+          <ul class="space-y-1.5">
+            <li v-for="(r, i) in project.resultados" :key="i" class="flex gap-2 text-sm text-slate-700 leading-relaxed">
+              <span class="text-blue-600 font-bold">→</span>
+              <span>{{ r }}</span>
+            </li>
+          </ul>
+        </div>
+
         <div class="flex flex-wrap gap-2">
           <span v-for="tech in project.tecnologias" :key="tech"
                 class="px-2.5 py-1 bg-slate-100 text-slate-700 text-xs font-medium rounded border border-slate-200">

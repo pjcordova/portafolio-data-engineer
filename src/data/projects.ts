@@ -16,6 +16,8 @@ export interface Project {
   mockup: string;
   /** Alto del iframe de la maqueta (clases Tailwind). Por defecto 'h-80'. */
   mockupAlto?: string;
+  /** Resultados medidos (opcional): 2-4 frases cortas con números concretos. */
+  resultados?: string[];
 }
 
 export const projects: Project[] = [
@@ -44,18 +46,23 @@ export const projects: Project[] = [
     cliente: 'Bithia Brand',
     categoria: 'E-commerce de Moda',
     problemaResuelto:
-      'Bithia vendía solo desde su stand físico en Polvos Azules (Ica), sin forma de mostrar su catálogo ni recibir pedidos fuera de ese horario y lugar. Necesitaban una tienda online simple, sin pasarela de pago (cobran por Yape/Plin), que confirme el pedido por WhatsApp y deje el control de stock en su propio ERP en vez de duplicarlo en la web.',
+      'El inventario real de Bithia vivía en su ERP y las ventas ocurrían por WhatsApp, sin ningún puente entre ambos: cada consulta de stock se revisaba a mano y, si se concretaba la venta, también se descontaba a mano. A eso se suma que el stand renueva mercadería cada 15 días con unidades limitadas, así que quien no pasaba esa semana no se enteraba de lo nuevo.',
     proceso: [
-      'Descubrimiento: mapeo del flujo real de venta (catálogo rotativo cada 15 días, cobro por Yape/Plin con confirmación por WhatsApp).',
-      'Diseño: identidad cálida y editorial con paleta propia de marca (terracota, crema, carbón, rosa).',
-      'Desarrollo: catálogo con regeneración automática (ISR), panel admin protegido con JWT y hash de contraseña, subida de imágenes a Cloudinary desde el navegador, e integración HTTP preparada para consultar stock al ERP sin duplicar la base de datos.',
-      'Entrega: despliegue continuo en Vercel desde la rama principal.',
+      'Descubrimiento: identificar que el problema no era la falta de catálogo, sino la falta de puente entre el ERP (dueño del inventario) y WhatsApp (donde ocurría la venta).',
+      'Diseño: catálogo autogestionable por la dueña (sin pedir despliegues a nadie), pago por Yape/Plin con comprobante adjunto y sin pasarela de pago.',
+      'Desarrollo: cada bug se reprodujo con datos reales antes de tocar código (p. ej. un scroll horizontal fantasma en móvil rastreado hasta un carrusel que inflaba el ancho del documento), y cada mejora se midió antes/después — incluido un endpoint de stock que llegó a generar ~12 consultas/segundo al ERP y se reescribió con límite por IP y caché.',
+      'Entrega: despliegue en Vercel con verificación en producción (rutas, consola, red) y la integración con el ERP lista, pendiente solo de activar credenciales.',
     ],
     tecnologias: ['Next.js 15', 'React 19', 'TypeScript', 'Tailwind CSS', 'Prisma + PostgreSQL (Neon)', 'Cloudinary', 'Vercel'],
     status: 'Completado',
     ilustracion: '/proyectos/ecommerce.svg',
     mockup: '/proyectos/mockups/bithia-web.html',
     mockupAlto: 'h-[560px]',
+    resultados: [
+      'De ~12 a 0 consultas/segundo al ERP al navegar portada y catálogo; una compra completa cuesta 3.',
+      'Endpoint de stock protegido: 70 peticiones en ráfaga → solo 2 llegaron al ERP.',
+      '~8,000 líneas de TypeScript en 64 archivos · 6 tablas en PostgreSQL · 17 prendas publicadas.',
+    ],
   },
   {
     slug: 'aibplus',
