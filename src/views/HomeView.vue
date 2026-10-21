@@ -27,23 +27,23 @@ const photoMissing = ref(false);
     <div class="max-w-7xl mx-auto px-6 relative z-10">
       <div class="grid lg:grid-cols-[1fr_360px] gap-12 lg:gap-16 items-center">
         <div class="max-w-3xl">
-          <p class="animate-fade-up text-xs font-bold tracking-[0.25em] text-accent-500 uppercase mb-6">
+          <p class="animate-fade-up text-xs font-bold tracking-[0.25em] text-accent-300 uppercase mb-6">
             Desarrollo Full Stack · B2B
           </p>
           <h1 class="animate-fade-up [animation-delay:90ms] text-5xl md:text-7xl font-bold tracking-tight text-paper leading-[1.1] mb-8">
-            Transformo procesos complejos en <span class="font-serif italic text-accent-500 font-normal">soluciones digitales</span> rentables.
+            Transformo procesos complejos en <span class="font-serif italic text-accent-300 font-normal">soluciones digitales</span> rentables.
           </h1>
-          <p class="animate-fade-up [animation-delay:180ms] text-xl md:text-2xl text-paper/50 mb-10 leading-relaxed font-light">
+          <p class="animate-fade-up [animation-delay:180ms] text-xl md:text-2xl text-paper/60 mb-10 leading-relaxed font-light">
             Cordova Solutions | Desarrollo Full Stack Especializado en E-commerce, ERPs y Soluciones Cloud.
           </p>
           <div class="animate-fade-up [animation-delay:270ms] flex flex-wrap gap-4">
             <a href="#proyectos"
-               class="btn-press group px-8 py-4 bg-paper text-ink rounded-lg font-bold shadow-lg shadow-ink/30 hover:shadow-xl transition-shadow inline-flex items-center gap-2">
+               class="btn-press group px-8 py-4 bg-accent-500 text-paper rounded-lg font-bold shadow-lg shadow-accent-500/30 hover:bg-accent-300 hover:shadow-accent-300/40 transition-colors inline-flex items-center gap-2">
               Ver Casos de Éxito
               <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
             </a>
             <a href="#contacto"
-               class="btn-press px-8 py-4 bg-transparent text-paper border-2 border-paper/20 rounded-lg font-bold hover:border-paper/50 transition-colors">
+               class="btn-press px-8 py-4 bg-transparent text-paper border-2 border-paper/60 rounded-lg font-bold hover:bg-paper hover:text-ink transition-colors">
               Hablemos de tu Proyecto
             </a>
           </div>
