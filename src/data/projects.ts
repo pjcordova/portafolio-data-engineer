@@ -18,6 +18,12 @@ export interface Project {
   mockupAlto?: string;
   /** Resultados medidos (opcional): 2-4 frases cortas con números concretos. */
   resultados?: string[];
+  /**
+   * URL pública del sitio en vivo (opcional). Úsalo solo cuando el sitio es
+   * de acceso público y no expone datos/paneles internos del cliente (p. ej.
+   * una tienda online), no para sistemas internos tipo ERP.
+   */
+  linkSitio?: string;
 }
 
 export const projects: Project[] = [
@@ -63,6 +69,7 @@ export const projects: Project[] = [
       'Endpoint de stock protegido: 70 peticiones en ráfaga → solo 2 llegaron al ERP.',
       '~8,000 líneas de TypeScript en 64 archivos · 6 tablas en PostgreSQL · 17 prendas publicadas.',
     ],
+    linkSitio: 'https://bithia-web.vercel.app/',
   },
   {
     slug: 'aibplus',
