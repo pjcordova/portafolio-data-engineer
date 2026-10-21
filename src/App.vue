@@ -1,30 +1,6 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
-import { supabase } from './lib/supabase';
+import { projects } from './data/projects';
 import ProjectCard from './components/ProjectCard.vue';
-
-const projects = ref<any[]>([]);
-const loading = ref(true);
-
-const fetchProjects = async () => {
-  try {
-    loading.value = true;
-    const { data, error } = await supabase
-      .from('proyectos')
-      .select('nombre, cliente, categoria_solucion, problema_resuelto, metrica_impacto, tecnologias, status, link_demo, link_figma, imagen_url');
-
-    if (error) throw error;
-    projects.value = data || [];
-  } catch (error) {
-    console.error('Error fetching projects:', error);
-  } finally {
-    loading.value = false;
-  }
-};
-
-onMounted(() => {
-  fetchProjects();
-});
 </script>
 
 <template>
@@ -115,16 +91,12 @@ onMounted(() => {
           </div>
         </div>
 
-        <div v-if="loading" class="flex justify-center py-20">
-          <div class="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-slate-900"></div>
-        </div>
-
-        <div v-else-if="projects.length === 0" class="text-center py-20 bg-slate-50 rounded-2xl border border-dashed border-slate-200">
+        <div v-if="projects.length === 0" class="text-center py-20 bg-slate-50 rounded-2xl border border-dashed border-slate-200">
           <p class="text-slate-500">No se encontraron proyectos disponibles.</p>
         </div>
 
         <div v-else class="space-y-12">
-          <ProjectCard v-for="project in projects" :key="project.nombre" :project="project" />
+          <ProjectCard v-for="project in projects" :key="project.slug" :project="project" />
         </div>
       </div>
     </section>

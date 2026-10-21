@@ -4,14 +4,14 @@
 ![TypeScript](https://img.shields.io/badge/Lang-TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![Vite](https://img.shields.io/badge/Build-Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/Styles-TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
-![Supabase](https://img.shields.io/badge/Database-Supabase-3ECF8E?style=for-the-badge&logo=supabase)
+![Bootstrap](https://img.shields.io/badge/Maquetas-Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
 ![Vercel](https://img.shields.io/badge/Hosting-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
 ## 📋 Descripción
 
 Sitio corporativo de **Cordova Solutions**, desarrollado en Vue 3 + Tailwind CSS, que presenta casos de éxito reales en desarrollo Full Stack, ERPs, e-commerce y soluciones cloud.
 
-Los proyectos mostrados en la sección "Casos de Éxito" **no están hardcodeados**: se consultan en tiempo real desde una tabla `proyectos` en Supabase (PostgreSQL), lo que permite actualizar el portafolio sin volver a desplegar el sitio.
+Los proyectos mostrados en la sección "Casos de Éxito" están definidos de forma estática en [`src/data/projects.ts`](./src/data/projects.ts) — no hay conexión a bases de datos ni accesos en vivo a los sistemas de los clientes. Para cada proyecto se muestra una **maqueta referencial** (HTML/CSS/Bootstrap, con datos de ejemplo) en lugar de un enlace directo a la aplicación real.
 
 ## 🛠️ Stack Tecnológico
 
@@ -19,15 +19,14 @@ Los proyectos mostrados en la sección "Casos de Éxito" **no están hardcodeado
 | :--- | :--- | :--- |
 | **Frontend** | Vue 3 + Vite + TypeScript | SPA con composición reactiva y tipado estático. |
 | **Estilos** | Tailwind CSS | Sistema de diseño utilitario, responsive. |
-| **Base de Datos** | Supabase (PostgreSQL) | Fuente de verdad de los proyectos mostrados. |
-| **Cliente DB** | `@supabase/supabase-js` | Consulta de la tabla `proyectos` vía API REST/anon key. |
+| **Datos de proyectos** | TypeScript estático (`src/data/projects.ts`) | Fuente de verdad de los casos de éxito mostrados. |
+| **Maquetas** | HTML + CSS + Bootstrap 5 (CDN), embebidas en `<iframe>` | Vista referencial de cada solución, sin exponer datos/accesos reales. |
 | **Hosting** | Vercel | Build estático (`vite build`) con despliegue continuo. |
 
 ## 🚀 Desarrollo Local
 
 ```bash
 npm install
-cp .env.example .env   # completa VITE_SUPABASE_URL y VITE_SUPABASE_ANON_KEY
 npm run dev
 ```
 
@@ -38,21 +37,23 @@ npm run build
 npm run preview
 ```
 
-## 🗄️ Estructura de datos (`proyectos`)
+## 🗂️ Estructura de datos (`src/data/projects.ts`)
 
-Cada fila representa un caso de éxito mostrado en el sitio:
+Cada entrada representa un caso de éxito mostrado en el sitio:
 
-| Columna | Descripción |
+| Campo | Descripción |
 | :--- | :--- |
 | `nombre` | Nombre del proyecto |
-| `cliente` | Cliente o "Uso interno" |
-| `categoria_solucion` | Categoría (E-commerce, ERP, EdTech, etc.) |
-| `problema_resuelto` | Descripción del problema que resuelve |
-| `metrica_impacto` | Resultado/impacto medible (opcional) |
+| `cliente` | Cliente (opcional) |
+| `categoria` | Categoría (E-commerce, ERP, EdTech, etc.) |
+| `problemaResuelto` | Descripción del problema que resuelve |
+| `proceso` | Pasos del proceso de trabajo (descubrimiento, diseño, desarrollo, entrega) |
 | `tecnologias` | Array de tecnologías usadas |
 | `status` | `Completado` / `En Progreso` |
-| `link_demo` | URL del demo en vivo (opcional) |
-| `link_figma` | URL del diseño en Figma (opcional) |
+| `ilustracion` | Ruta a la ilustración referencial (`public/proyectos/*.svg`) |
+| `mockup` | Ruta a la maqueta HTML/CSS/Bootstrap (`public/proyectos/mockups/*.html`) |
+
+Para agregar o editar un proyecto, modifica ese archivo y, si aplica, crea su maqueta en `public/proyectos/mockups/`.
 
 ## 🌐 Contacto
 

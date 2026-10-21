@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Maqueta referencial — Bithia</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+  :root { --terracotta:#b4572f; --sand:#f7f3ee; --ink:#2b2420; }
+  body { background:var(--sand); font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color:var(--ink); }
+  .brand { letter-spacing:.15em; font-weight:700; }
+  .badge-demo { font-size:.6rem; letter-spacing:.04em; }
+  .navbar-bithia { background:#fff; border-bottom:1px solid #eee; }
+  .navbar-bithia a { color:var(--ink) !important; font-size:.8rem; letter-spacing:.05em; }
+  .hero { background:linear-gradient(135deg,#c98a63,#8a4a2f); color:#fff; padding:60px 40px; position:relative; min-height:320px; display:flex; align-items:flex-end; }
+  .hero .eyebrow { background:#fff; color:var(--ink); display:inline-block; padding:.25rem .75rem; font-size:.65rem; letter-spacing:.08em; font-weight:700; }
+  .hero h1 { font-weight:800; font-size:2rem; }
+  .btn-terracotta { background:var(--terracotta); color:#fff; font-size:.75rem; letter-spacing:.05em; }
+  .ph-block { background:linear-gradient(135deg,#e8d9c4,#c98a63); border-radius:.5rem; }
+  .product-card { background:#fff; border-radius:.5rem; overflow:hidden; }
+  .product-card .ph { height:150px; }
+  .product-card .info { padding:.6rem .75rem; }
+  .price { color:var(--terracotta); font-weight:700; }
+  .marquee { background:var(--ink); color:#fff; font-size:.65rem; letter-spacing:.1em; padding:.4rem 0; white-space:nowrap; overflow:hidden; }
+  .marquee span { display:inline-block; padding:0 1.5rem; }
+  .cat-tile { position:relative; border-radius:.5rem; overflow:hidden; height:160px; }
+  .cat-tile .label { position:absolute; bottom:10px; left:10px; background:rgba(0,0,0,.55); color:#fff; font-size:.65rem; padding:.2rem .6rem; letter-spacing:.05em; }
+  footer.bithia-footer { background:#fff; border-top:1px solid #eee; }
+  footer.bithia-footer h6 { font-size:.7rem; letter-spacing:.08em; color:#8a5a3a; }
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-bithia px-4 py-3 d-flex justify-content-between align-items-center">
+  <span class="brand">BITHIA</span>
+  <div class="d-none d-md-flex gap-4">
+    <span>CATEGORÍAS ⌄</span><span>NUEVOS INGRESOS</span><span>VER TODO</span>
+  </div>
+  <div class="d-flex align-items-center gap-3">
+    <span class="badge bg-dark badge-demo">MAQUETA · DATOS DE EJEMPLO</span>
+    <span>👤</span><span>🔍</span><span>🛍️</span>
+  </div>
+</nav>
+
+<div class="hero">
+  <div>
+    <span class="eyebrow">RECIÉN LLEGADO</span>
+    <h1 class="mt-2 mb-2">LO NUEVO DE ESTA TEMPORADA</h1>
+    <p class="mb-3" style="max-width:420px; opacity:.9;">Renovamos el catálogo cada 15 días. Lo que ves hoy puede no estar en la próxima visita.</p>
+    <button class="btn btn-light btn-sm fw-bold">VER NOVEDADES</button>
+  </div>
+</div>
+
+<div class="marquee"><span>MERCADERÍA NUEVA CADA 15 DÍAS · MERCADERÍA NUEVA CADA 15 DÍAS · MERCADERÍA NUEVA CADA 15 DÍAS · MERCADERÍA NUEVA CADA 15 DÍAS</span></div>
+
+<div class="container py-5">
+  <h6 class="text-center text-uppercase mb-4" style="letter-spacing:.15em">Los más pedidos</h6>
+  <div class="row g-3">
+    <div class="col-6 col-md-3">
+      <div class="product-card">
+        <div class="ph" style="background:linear-gradient(135deg,#7a1f2b,#3f0f17)"></div>
+        <div class="info">
+          <div class="small">Vestido Ejemplo A</div>
+          <div class="price small">S/ 90.00</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="product-card">
+        <div class="ph" style="background:linear-gradient(135deg,#5a4a3a,#2e2620)"></div>
+        <div class="info">
+          <div class="small">Set Ejemplo B</div>
+          <div class="price small">S/ 120.00</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="product-card">
+        <div class="ph" style="background:linear-gradient(135deg,#4a4a4a,#1e1e1e)"></div>
+        <div class="info">
+          <div class="small">Básico Ejemplo C</div>
+          <div class="price small">S/ 68.00</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="product-card">
+        <div class="ph" style="background:linear-gradient(135deg,#d6a3c9,#9a5f8c)"></div>
+        <div class="info">
+          <div class="small">Vestido Ejemplo D</div>
+          <div class="price small">S/ 85.00</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-center mt-4">
+    <button class="btn btn-dark btn-sm">VER TODO EL CATÁLOGO</button>
+  </div>
+</div>
+
+<div class="container pb-5">
+  <div class="row g-3">
+    <div class="col-6 col-md-3">
+      <div class="cat-tile ph-block"><span class="label">VESTIDOS</span></div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="cat-tile" style="background:linear-gradient(135deg,#8a7a6a,#4a3f35)"><span class="label">BLUSAS</span></div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="cat-tile" style="background:linear-gradient(135deg,#e0b98f,#b4813f)"><span class="label">FALDAS</span></div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="cat-tile" style="background:linear-gradient(135deg,#7a2f3a,#4a1620)"><span class="label">PANTALONES</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="marquee"><span>POCAS UNIDADES POR MODELO · POCAS UNIDADES POR MODELO · POCAS UNIDADES POR MODELO · POCAS UNIDADES POR MODELO</span></div>
+
+<div class="container py-5">
+  <div class="row align-items-center g-4">
+    <div class="col-12 col-md-7">
+      <div class="ph-block" style="height:220px"></div>
+    </div>
+    <div class="col-12 col-md-5">
+      <div class="small text-uppercase text-muted mb-1" style="letter-spacing:.1em">Edición limitada</div>
+      <h4 class="fw-bold">Vestido Ejemplo A</h4>
+      <div class="price fs-5 mb-3">S/ 90.00</div>
+      <button class="btn btn-dark btn-sm">VER PRENDA</button>
+    </div>
+  </div>
+</div>
+
+<div class="container pb-5">
+  <h6 class="text-center text-uppercase mb-4" style="letter-spacing:.15em">Carrito (vista rápida)</h6>
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-6">
+      <div class="bg-white rounded-3 p-3 d-flex gap-3 align-items-center mb-3">
+        <div class="ph-block" style="width:60px;height:70px;flex-shrink:0"></div>
+        <div class="flex-fill">
+          <div class="small fw-bold">Set Ejemplo B</div>
+          <div class="small text-muted">Talla: M</div>
+          <div class="price small">S/ 120.00</div>
+        </div>
+      </div>
+      <div class="bg-white rounded-3 p-3">
+        <div class="d-flex justify-content-between small mb-1"><span>Subtotal</span><strong>S/ 120.00</strong></div>
+        <div class="d-flex justify-content-between small text-muted mb-2"><span>Envío</span><span>Por coordinar</span></div>
+        <button class="btn btn-terracotta w-100 mb-2">Continuar compra</button>
+        <div class="small text-muted text-center">Eliges tu método de pago y coordinamos la entrega por WhatsApp</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="bithia-footer py-5">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-12 col-md-4">
+        <div class="brand mb-2">BITHIA</div>
+        <div class="small text-muted">Moda femenina con la calidez de Ica. Prendas exclusivas y unidades limitadas, renovadas cada 15 días.</div>
+      </div>
+      <div class="col-6 col-md-4">
+        <h6>CATÁLOGO</h6>
+        <div class="small">Vestidos</div>
+        <div class="small">Blusas</div>
+        <div class="small">Faldas</div>
+        <div class="small">Pantalones</div>
+      </div>
+      <div class="col-6 col-md-4">
+        <h6>VISÍTANOS</h6>
+        <div class="small">Stand físico · Ica, Perú</div>
+        <div class="small">Pedidos y consultas por WhatsApp</div>
+      </div>
+    </div>
+    <hr>
+    <div class="small text-muted">© 2026 Bithia Brand. Todos los derechos reservados.</div>
+  </div>
+</footer>
+
+</body>
+</html>

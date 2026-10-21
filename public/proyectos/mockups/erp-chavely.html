@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Maqueta referencial — Chavely ERP</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+  body {
+    background:#e2e8f0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    display:flex;
+    justify-content:center;
+    padding:16px 0;
+  }
+  .phone {
+    width:100%;
+    max-width:360px;
+    background:#f8fafc;
+    border-radius:28px;
+    border:8px solid #0f172a;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+  }
+  .phone-header {
+    background:linear-gradient(135deg,#059669,#047857);
+    color:#fff;
+    padding:14px 18px 20px;
+  }
+  .phone-header .brand { font-weight:700; font-size:.95rem; display:flex; align-items:center; gap:6px; }
+  .phone-header h5 { margin:.5rem 0 0; font-weight:700; }
+  .phone-header .date { font-size:.75rem; opacity:.85; }
+  .badge-demo { font-size:.6rem; letter-spacing:.04em; }
+  .content { padding:14px 16px 90px; min-height:480px; }
+  .tab-pane-custom { display:none; }
+  .tab-pane-custom.active { display:block; }
+  .chip { border:1px solid #fcd9b6; background:#fff1e0; color:#c2641c; border-radius:999px; padding:.35rem .9rem; font-size:.75rem; font-weight:600; }
+  .bottom-nav {
+    position:absolute; bottom:0; left:0; right:0;
+    background:#fff; border-top:1px solid #e2e8f0;
+    display:flex; max-width:360px; margin:0 auto;
+  }
+  .bottom-nav button {
+    flex:1; border:0; background:none; padding:10px 0; font-size:.7rem; color:#94a3b8;
+  }
+  .bottom-nav button.active { color:#059669; font-weight:700; }
+  .frame-wrap { position:relative; max-width:360px; margin:0 auto; }
+  .stat-strip { display:flex; justify-content:space-between; background:#fff; border-radius:.75rem; padding:.75rem 1rem; margin:-14px 0 14px; box-shadow:0 2px 8px rgba(0,0,0,.06); font-size:.7rem; }
+  .stat-strip div { text-align:center; }
+  .bars { display:flex; align-items:flex-end; gap:18px; height:90px; padding:0 8px; }
+  .bars .bar { width:18px; border-radius:4px 4px 0 0; }
+</style>
+</head>
+<body>
+<div class="frame-wrap">
+  <div class="phone">
+    <div class="phone-header">
+      <div class="d-flex justify-content-between align-items-center">
+        <span class="brand">🌿 Extractos Chavely</span>
+        <span class="badge bg-light text-dark badge-demo">MAQUETA · DATOS DE EJEMPLO</span>
+      </div>
+      <h5 id="page-title">Registro Rápido</h5>
+      <div class="date">Martes, 20 de octubre</div>
+    </div>
+
+    <div class="content">
+      <!-- TAB: REGISTRO -->
+      <div class="tab-pane-custom active" id="tab-registro">
+        <div class="stat-strip">
+          <div><div class="text-muted">CAJA LOCAL</div><strong>S/ 950.00</strong></div>
+          <div><div class="text-muted">APPS (YAPE)</div><strong class="text-purple" style="color:#7c3aed">S/ 610.00</strong></div>
+          <div><div class="text-muted">BANCO (BBVA)</div><strong>S/ 0.00</strong></div>
+        </div>
+
+        <label class="text-muted small">Monto a registrar (S/)</label>
+        <div class="bg-white border rounded-3 p-3 mb-3 fs-3 text-secondary">0.00</div>
+
+        <div class="small fw-bold mb-2">+ Ingresos</div>
+        <div class="d-flex gap-2 mb-3">
+          <button class="btn btn-success flex-fill py-3">💵 Efectivo</button>
+          <button class="btn flex-fill py-3 text-white" style="background:#7c3aed">📱 Yape</button>
+        </div>
+
+        <div class="small fw-bold mb-2">− Egresos Directos</div>
+        <div class="d-flex gap-2 mb-3 flex-wrap">
+          <span class="chip">Ana</span>
+          <span class="chip">Luis</span>
+          <span class="chip">Sol</span>
+        </div>
+
+        <div class="bg-light border rounded-3 p-3 mb-3">
+          <div class="small fw-bold mb-2">🧴 Módulo Insumo (S/ 3.00 x L)</div>
+          <div class="d-flex gap-2">
+            <select class="form-select form-select-sm"><option>Seleccionar litros…</option></select>
+            <button class="btn btn-primary btn-sm">Guardar</button>
+          </div>
+        </div>
+
+        <button class="btn btn-dark w-100 mb-3">📦 Insumos / Stock</button>
+
+        <div class="d-flex gap-2 mb-3">
+          <button class="btn flex-fill text-white" style="background:#4f46e5">👤 Pago Personal</button>
+          <button class="btn btn-secondary flex-fill">🧾 Gasto Extra</button>
+        </div>
+
+        <div class="card border-0 shadow-sm">
+          <div class="card-body">
+            <div class="small fw-bold mb-2">🕒 Movimientos de Hoy</div>
+            <p class="text-muted small mb-0 text-center py-2">No hay movimientos hoy</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB: PANEL -->
+      <div class="tab-pane-custom" id="tab-panel">
+        <div class="card text-white border-0 mb-3" style="background:linear-gradient(135deg,#059669,#047857)">
+          <div class="card-body">
+            <div class="small opacity-75">RESUMEN SEMANAL · LUN A HOY</div>
+            <div class="fs-3 fw-bold">S/ 4,230.00</div>
+            <div class="small opacity-75">Total vendido esta semana</div>
+          </div>
+        </div>
+
+        <div class="card border-0 shadow-sm mb-3">
+          <div class="card-body">
+            <div class="small fw-bold mb-2">Ventas y gastos por día</div>
+            <div class="bars">
+              <div class="bar bg-success" style="height:60%"></div>
+              <div class="bar bg-warning" style="height:25%"></div>
+              <div class="bar bg-success" style="height:80%"></div>
+              <div class="bar bg-warning" style="height:15%"></div>
+            </div>
+            <div class="d-flex justify-content-between small text-muted px-2">
+              <span>Lun</span><span>Mar</span><span>Mié</span><span>Jue</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-2 mb-3">
+          <div class="col-6"><div class="bg-white border rounded-3 p-2 text-center"><div class="small text-muted">Efectivo</div><strong>S/ 2,140</strong></div></div>
+          <div class="col-6"><div class="bg-white border rounded-3 p-2 text-center"><div class="small text-muted">Yape</div><strong>S/ 1,980</strong></div></div>
+          <div class="col-6"><div class="bg-white border rounded-3 p-2 text-center"><div class="small text-muted">Plin</div><strong>S/ 70</strong></div></div>
+          <div class="col-6"><div class="bg-white border rounded-3 p-2 text-center"><div class="small text-muted">BBVA</div><strong>S/ 40</strong></div></div>
+        </div>
+
+        <div class="card bg-dark text-white border-0 mb-3">
+          <div class="card-body">
+            <div class="small opacity-75 mb-2">RESULTADO DE OCTUBRE 2026</div>
+            <div class="d-flex justify-content-between">
+              <div><div class="small opacity-75">Ingresos</div><strong>S/ 6,120</strong></div>
+              <div><div class="small opacity-75">Gastos</div><strong class="text-warning">S/ 410</strong></div>
+              <div><div class="small opacity-75">Neto</div><strong class="text-success">S/ 5,710</strong></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card border-0 shadow-sm">
+          <div class="card-body">
+            <div class="small fw-bold mb-2">Historial de auditorías</div>
+            <div class="d-flex justify-content-between small border-bottom py-2">
+              <span>Efectivo · Egreso</span><span class="text-success">S/ 120.00</span>
+            </div>
+            <div class="d-flex justify-content-between small py-2">
+              <span>Yape · Egreso</span><span class="text-success">S/ 95.00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB: STOCK -->
+      <div class="tab-pane-custom" id="tab-stock">
+        <div class="alert alert-warning py-2 small">⚠️ Stock bajo · 1 producto por debajo del mínimo</div>
+
+        <div class="row g-2 mb-3">
+          <div class="col-6"><div class="bg-white border rounded-3 p-3 text-center"><div class="small text-muted">Productos activos</div><div class="fs-5 fw-bold">14</div></div></div>
+          <div class="col-6"><div class="bg-white border rounded-3 p-3 text-center"><div class="small text-muted">Entradas hoy</div><div class="fs-5 fw-bold text-success">0</div></div></div>
+        </div>
+
+        <div class="card border-0 shadow-sm mb-3">
+          <div class="card-body">
+            <div class="d-flex justify-content-between small fw-bold mb-2">
+              <span>Existencias por proveedor</span><span class="text-muted">Catálogo actual</span>
+            </div>
+            <div class="mb-2">
+              <strong class="small">Proveedor A</strong>
+              <div class="text-success small">14 cajas · 12 unidades</div>
+              <div class="text-muted" style="font-size:.7rem">5 productos activos</div>
+            </div>
+            <div>
+              <strong class="small">Proveedor B</strong>
+              <div class="text-success small">25 cajas</div>
+              <div class="text-muted" style="font-size:.7rem">9 productos activos</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex gap-2">
+          <button class="btn btn-success flex-fill">Nueva recepción</button>
+          <button class="btn btn-dark flex-fill">Registrar venta</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom-nav">
+      <button class="active" data-tab="tab-registro" data-title="Registro Rápido">🏠<br>Registro</button>
+      <button data-tab="tab-panel" data-title="Panel Gerencial">📊<br>Panel</button>
+      <button data-tab="tab-stock" data-title="Inventario">📦<br>Stock</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.bottom-nav button').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      document.querySelectorAll('.bottom-nav button').forEach(function (b) { b.classList.remove('active'); });
+      document.querySelectorAll('.tab-pane-custom').forEach(function (p) { p.classList.remove('active'); });
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.tab).classList.add('active');
+      document.getElementById('page-title').textContent = btn.dataset.title;
+    });
+  });
+</script>
+</body>
+</html>
