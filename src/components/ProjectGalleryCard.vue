@@ -4,16 +4,11 @@ import type { Project } from '../data/projects';
 defineProps<{
   project: Project;
 }>();
-
-const emit = defineEmits<{
-  open: [];
-}>();
 </script>
 
 <template>
-  <button type="button"
-          class="group w-full text-left bg-white border border-ink/10 rounded-xl overflow-hidden transition-shadow duration-300 hover:shadow-xl hover:shadow-ink/5 btn-press"
-          @click="emit('open')">
+  <RouterLink :to="`/proyectos/${project.slug}`"
+              class="group block bg-white border border-ink/10 rounded-xl overflow-hidden transition-shadow duration-300 hover:shadow-xl hover:shadow-ink/5">
     <div class="h-48 overflow-hidden bg-paper relative">
       <img :src="project.ilustracion"
            :alt="`Ilustración referencial: ${project.nombre}`"
@@ -33,5 +28,5 @@ const emit = defineEmits<{
         <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
       </span>
     </div>
-  </button>
+  </RouterLink>
 </template>
