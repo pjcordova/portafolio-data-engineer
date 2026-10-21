@@ -66,21 +66,21 @@ defineProps<{
 
     <!-- Maqueta referencial (HTML/CSS/Bootstrap, sin datos ni accesos reales) -->
     <div class="border-t border-ink/10 bg-ink/[0.02] p-6">
-      <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
-        <h4 class="text-sm font-bold text-ink uppercase tracking-wider">Vista de la Solución</h4>
-        <div class="flex items-center gap-3">
-          <a v-if="project.linkSitio" :href="project.linkSitio" target="_blank" rel="noopener"
-             class="inline-flex items-center gap-1 text-[11px] font-bold text-accent-600 hover:text-accent-700 uppercase tracking-wide transition-colors">
-            Ver sitio en vivo
-            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-          </a>
-          <span v-else-if="project.accesoPrivado"
-                class="inline-flex items-center gap-1 text-[11px] font-semibold text-ink/60 uppercase tracking-wide">
-            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0 .828-.672 1.5-1.5 1.5S9 11.828 9 11s.672-1.5 1.5-1.5S12 10.172 12 11zm0 0v3m-6-3V7a4 4 0 118 0v4m-9 0h10a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6a1 1 0 011-1z"/></svg>
-            Acceso privado · sistema interno del negocio
-          </span>
+      <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+        <div>
+          <h4 class="text-sm font-bold text-ink uppercase tracking-wider">Vista de la Solución</h4>
           <span class="text-[11px] font-semibold text-ink/50 uppercase tracking-wide">Maqueta referencial</span>
         </div>
+        <a v-if="project.linkSitio" :href="project.linkSitio" target="_blank" rel="noopener"
+           class="btn-press inline-flex items-center gap-2 px-4 py-2.5 bg-accent-600 text-paper text-sm font-bold rounded-lg shadow-sm shadow-accent-600/20 hover:bg-accent-700 hover:shadow-md transition-colors">
+          Ver sitio en vivo
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+        <span v-else-if="project.accesoPrivado"
+              class="inline-flex items-center gap-1.5 px-3 py-2 bg-ink/5 border border-ink/10 rounded-lg text-xs font-semibold text-ink/60 uppercase tracking-wide">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0 .828-.672 1.5-1.5 1.5S9 11.828 9 11s.672-1.5 1.5-1.5S12 10.172 12 11zm0 0v3m-6-3V7a4 4 0 118 0v4m-9 0h10a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6a1 1 0 011-1z"/></svg>
+          Acceso privado · sistema interno del negocio
+        </span>
       </div>
       <div class="rounded-lg border border-ink/10 bg-white overflow-hidden shadow-sm">
         <div class="flex items-center gap-2 px-3 py-2 bg-ink/[0.03] border-b border-ink/10">

@@ -165,19 +165,18 @@ onBeforeUnmount(() => {
 
     <!-- Project Detail Modal -->
     <Transition name="modal-fade">
-      <div v-if="selectedProject"
-           class="fixed inset-0 z-[60] flex items-start sm:items-center justify-center bg-ink/60 backdrop-blur-sm p-0 sm:p-6 overflow-y-auto"
-           role="dialog"
-           aria-modal="true"
-           @click.self="closeProject">
-        <div class="relative w-full sm:max-w-3xl bg-paper sm:rounded-2xl shadow-2xl my-0 sm:my-auto">
-          <button ref="closeButtonRef" type="button"
-                  class="btn-press absolute -top-3 -right-3 sm:top-4 sm:right-4 w-10 h-10 rounded-full bg-ink text-paper flex items-center justify-center shadow-lg z-10"
-                  aria-label="Cerrar"
-                  @click="closeProject">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-          </button>
-          <ProjectCard :project="selectedProject" />
+      <div v-if="selectedProject" class="fixed inset-0 z-[60]" role="dialog" aria-modal="true">
+        <div class="fixed inset-0 bg-ink/60 backdrop-blur-sm" @click="closeProject"></div>
+        <button ref="closeButtonRef" type="button"
+                class="btn-press fixed top-4 right-4 sm:top-6 sm:right-6 w-10 h-10 rounded-full bg-ink text-paper flex items-center justify-center shadow-lg z-20"
+                aria-label="Cerrar"
+                @click="closeProject">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+        <div class="relative h-full overflow-y-auto flex items-start sm:items-center justify-center p-0 sm:p-6">
+          <div class="modal-panel relative w-full sm:max-w-3xl bg-paper sm:rounded-2xl shadow-2xl my-0 sm:my-auto">
+            <ProjectCard :project="selectedProject" />
+          </div>
         </div>
       </div>
     </Transition>
@@ -287,12 +286,12 @@ body {
 .modal-fade-leave-to {
   opacity: 0;
 }
-.modal-fade-enter-active > div,
-.modal-fade-leave-active > div {
+.modal-fade-enter-active .modal-panel,
+.modal-fade-leave-active .modal-panel {
   transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
 }
-.modal-fade-enter-from > div,
-.modal-fade-leave-to > div {
+.modal-fade-enter-from .modal-panel,
+.modal-fade-leave-to .modal-panel {
   transform: translateY(16px) scale(0.98);
   opacity: 0;
 }
