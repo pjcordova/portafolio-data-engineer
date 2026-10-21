@@ -1,7 +1,9 @@
 <script setup lang="ts">
-import { onMounted } from 'vue';
+import { onMounted, ref } from 'vue';
 import { projects } from './data/projects';
 import ProjectCard from './components/ProjectCard.vue';
+
+const menuOpen = ref(false);
 
 onMounted(() => {
   const observer = new IntersectionObserver(
@@ -32,6 +34,21 @@ onMounted(() => {
           <a href="#proyectos" class="nav-link">Casos de Éxito</a>
           <a href="#contacto" class="nav-link">Contacto</a>
         </div>
+        <button
+          class="md:hidden w-8 h-8 flex flex-col items-center justify-center gap-[5px]"
+          aria-label="Abrir menú"
+          :aria-expanded="menuOpen"
+          @click="menuOpen = !menuOpen">
+          <span class="block w-6 h-[1.5px] bg-ink transition-transform duration-300 origin-center"
+                :class="menuOpen ? 'rotate-45 translate-y-[3px]' : ''"></span>
+          <span class="block w-6 h-[1.5px] bg-ink transition-transform duration-300 origin-center"
+                :class="menuOpen ? '-rotate-45 -translate-y-[3px]' : ''"></span>
+        </button>
+      </div>
+      <div v-show="menuOpen" class="md:hidden border-t border-ink/10 bg-paper px-6 py-4 flex flex-col gap-4 text-sm font-medium">
+        <a href="#metodologia" class="nav-link" @click="menuOpen = false">Metodología</a>
+        <a href="#proyectos" class="nav-link" @click="menuOpen = false">Casos de Éxito</a>
+        <a href="#contacto" class="nav-link" @click="menuOpen = false">Contacto</a>
       </div>
     </nav>
 
