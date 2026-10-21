@@ -4,6 +4,7 @@ import { projects } from '../data/projects';
 import ProjectGalleryCard from '../components/ProjectGalleryCard.vue';
 import SiteNav from '../components/SiteNav.vue';
 import SiteFooter from '../components/SiteFooter.vue';
+import TechStack from '../components/TechStack.vue';
 import { useReveal } from '../composables/useReveal';
 
 useReveal();
@@ -60,6 +61,8 @@ const photoMissing = ref(false);
       </div>
     </div>
   </header>
+
+  <TechStack />
 
   <!-- Methodology Section -->
   <section id="metodologia" class="py-24 bg-ink/[0.03]">
