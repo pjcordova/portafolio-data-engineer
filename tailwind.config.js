@@ -17,6 +17,11 @@ export default {
           600: '#1F43E6',
           700: '#1733B3',
         },
+        gold: {
+          DEFAULT: '#C9A24A',
+          light: '#E3C27E',
+          dark: '#8B6B2E',
+        },
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
