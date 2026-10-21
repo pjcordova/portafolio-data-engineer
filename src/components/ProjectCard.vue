@@ -19,9 +19,9 @@ defineProps<{
       <div class="p-8 flex-1">
         <div class="flex flex-wrap justify-between items-start mb-4 gap-4">
           <div>
-            <span class="text-xs font-bold tracking-widest text-ink/40 uppercase">{{ project.categoria }}</span>
+            <span class="text-xs font-bold tracking-widest text-ink/60 uppercase">{{ project.categoria }}</span>
             <h3 class="text-2xl font-serif italic font-normal text-ink mt-1">{{ project.nombre }}</h3>
-            <p v-if="project.cliente" class="text-ink/50 font-medium">Cliente: {{ project.cliente }}</p>
+            <p v-if="project.cliente" class="text-ink/60 font-medium">Cliente: {{ project.cliente }}</p>
           </div>
           <span v-if="project.status"
                 class="px-3 py-1 rounded-full text-xs font-semibold"
@@ -75,17 +75,17 @@ defineProps<{
             <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
           </a>
           <span v-else-if="project.accesoPrivado"
-                class="inline-flex items-center gap-1 text-[11px] font-semibold text-ink/40 uppercase tracking-wide">
+                class="inline-flex items-center gap-1 text-[11px] font-semibold text-ink/60 uppercase tracking-wide">
             <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0 .828-.672 1.5-1.5 1.5S9 11.828 9 11s.672-1.5 1.5-1.5S12 10.172 12 11zm0 0v3m-6-3V7a4 4 0 118 0v4m-9 0h10a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6a1 1 0 011-1z"/></svg>
             Acceso privado · sistema interno del negocio
           </span>
-          <span class="text-[11px] font-semibold text-ink/30 uppercase tracking-wide">Maqueta referencial</span>
+          <span class="text-[11px] font-semibold text-ink/50 uppercase tracking-wide">Maqueta referencial</span>
         </div>
       </div>
       <div class="rounded-lg border border-ink/10 bg-white overflow-hidden shadow-sm">
         <div class="flex items-center gap-2 px-3 py-2 bg-ink/[0.03] border-b border-ink/10">
           <span class="w-1.5 h-1.5 rounded-full bg-accent-500"></span>
-          <span class="text-[11px] text-ink/30 font-mono">maqueta — datos de ejemplo</span>
+          <span class="text-[11px] text-ink/50 font-mono">maqueta — datos de ejemplo</span>
         </div>
         <iframe :src="project.mockup"
                 title="Maqueta referencial de la solución"

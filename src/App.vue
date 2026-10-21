@@ -1,11 +1,30 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue';
-import { projects } from './data/projects';
+import { onMounted, onBeforeUnmount, ref, watch } from 'vue';
+import { projects, type Project } from './data/projects';
 import ProjectCard from './components/ProjectCard.vue';
+import ProjectGalleryCard from './components/ProjectGalleryCard.vue';
 
 const menuOpen = ref(false);
+const selectedProject = ref<Project | null>(null);
+
+function openProject(project: Project) {
+  selectedProject.value = project;
+}
+function closeProject() {
+  selectedProject.value = null;
+}
+
+watch(selectedProject, (project) => {
+  document.body.style.overflow = project ? 'hidden' : '';
+});
+
+function onKeydown(e: KeyboardEvent) {
+  if (e.key === 'Escape') closeProject();
+}
 
 onMounted(() => {
+  window.addEventListener('keydown', onKeydown);
+
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -18,6 +37,11 @@ onMounted(() => {
     { threshold: 0.15, rootMargin: '0px 0px -40px 0px' }
   );
   document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener('keydown', onKeydown);
+  document.body.style.overflow = '';
 });
 </script>
 
@@ -126,13 +150,32 @@ onMounted(() => {
           <p class="text-ink/50">No se encontraron proyectos disponibles.</p>
         </div>
 
-        <div v-else class="space-y-12">
+        <div v-else class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           <div v-for="project in projects" :key="project.slug" class="reveal">
-            <ProjectCard :project="project" />
+            <ProjectGalleryCard :project="project" @open="openProject(project)" />
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Project Detail Modal -->
+    <Transition name="modal-fade">
+      <div v-if="selectedProject"
+           class="fixed inset-0 z-[60] flex items-start sm:items-center justify-center bg-ink/60 backdrop-blur-sm p-0 sm:p-6 overflow-y-auto"
+           role="dialog"
+           aria-modal="true"
+           @click.self="closeProject">
+        <div class="relative w-full sm:max-w-3xl bg-paper sm:rounded-2xl shadow-2xl my-0 sm:my-auto">
+          <button type="button"
+                  class="btn-press absolute -top-3 -right-3 sm:top-4 sm:right-4 w-10 h-10 rounded-full bg-ink text-paper flex items-center justify-center shadow-lg z-10"
+                  aria-label="Cerrar"
+                  @click="closeProject">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+          <ProjectCard :project="selectedProject" />
+        </div>
+      </div>
+    </Transition>
 
     <!-- Footer / Contact -->
     <footer id="contacto" class="bg-ink text-paper py-24">
@@ -180,7 +223,7 @@ onMounted(() => {
           </div>
         </div>
 
-        <div class="mt-20 pt-8 border-t border-paper/10 text-center text-paper/40 text-sm">
+        <div class="mt-20 pt-8 border-t border-paper/10 text-center text-paper/60 text-sm">
           <p>© 2026 Cordova Solutions. Todos los derechos reservados.</p>
         </div>
       </div>
@@ -229,5 +272,23 @@ body {
 }
 .btn-press:active {
   transform: scale(0.97);
+}
+
+.modal-fade-enter-active,
+.modal-fade-leave-active {
+  transition: opacity 0.25s ease;
+}
+.modal-fade-enter-from,
+.modal-fade-leave-to {
+  opacity: 0;
+}
+.modal-fade-enter-active > div,
+.modal-fade-leave-active > div {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+}
+.modal-fade-enter-from > div,
+.modal-fade-leave-to > div {
+  transform: translateY(16px) scale(0.98);
+  opacity: 0;
 }
 </style>
