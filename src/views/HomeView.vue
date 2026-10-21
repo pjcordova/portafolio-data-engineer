@@ -69,7 +69,7 @@ const photoMissing = ref(false);
   <section id="metodologia" class="py-24 bg-gold">
     <div class="max-w-7xl mx-auto px-6">
       <div class="reveal mb-16">
-        <h2 class="inline-block text-base font-bold tracking-[0.15em] text-ink uppercase mb-4 px-4 py-1.5 bg-ink/10 rounded-full">Metodología B2B</h2>
+        <h2 class="inline-block text-base font-bold tracking-[0.15em] text-ink uppercase mb-4 px-4 py-1.5 bg-paper rounded-full shadow-sm">Metodología B2B</h2>
         <h3 class="text-3xl md:text-4xl font-bold text-paper">Enfoque estratégico para resultados tangibles</h3>
       </div>
 
