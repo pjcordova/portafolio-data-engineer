@@ -72,6 +72,11 @@ defineProps<{
             Ver sitio en vivo
             <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
           </a>
+          <span v-else-if="project.accesoPrivado"
+                class="inline-flex items-center gap-1 text-[11px] font-semibold text-slate-500 uppercase tracking-wide">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0 .828-.672 1.5-1.5 1.5S9 11.828 9 11s.672-1.5 1.5-1.5S12 10.172 12 11zm0 0v3m-6-3V7a4 4 0 118 0v4m-9 0h10a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6a1 1 0 011-1z"/></svg>
+            Acceso privado · sistema interno del negocio
+          </span>
           <span class="text-[11px] font-semibold text-slate-400 uppercase tracking-wide">Maqueta referencial</span>
         </div>
       </div>

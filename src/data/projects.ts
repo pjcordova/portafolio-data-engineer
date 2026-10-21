@@ -24,6 +24,11 @@ export interface Project {
    * una tienda online), no para sistemas internos tipo ERP.
    */
   linkSitio?: string;
+  /**
+   * Para sistemas internos con login (ERP, paneles, etc.) donde no corresponde
+   * compartir la URL ni una cuenta demo. Se muestra como etiqueta en vez de link.
+   */
+  accesoPrivado?: boolean;
 }
 
 export const projects: Project[] = [
@@ -43,8 +48,15 @@ export const projects: Project[] = [
     tecnologias: ['Vue 3', 'TypeScript', 'Supabase', 'PostgreSQL', 'Tailwind CSS'],
     status: 'Completado',
     ilustracion: '/proyectos/erp-financiero.svg',
+    resultados: [
+      'Cuadre de caja diario automático durante 25 días consecutivos de venta, sin discrepancias entre lo registrado y lo contado.',
+      '66% de las ventas por efectivo y 34% por Yape, visibles en tiempo real sin hojas de cálculo aparte.',
+      'El día de mayor venta superó en más de 3 veces al de menor venta — un patrón que antes no era visible para el negocio.',
+      'Egresos clasificados automáticamente por categoría (banca, proveedores, personal, insumos) para saber en qué se va el dinero.',
+    ],
     mockup: '/proyectos/mockups/erp-chavely.html',
     mockupAlto: 'h-[640px]',
+    accesoPrivado: true,
   },
   {
     slug: 'bithia-web',
