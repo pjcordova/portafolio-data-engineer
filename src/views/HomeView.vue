@@ -66,28 +66,28 @@ const photoMissing = ref(false);
   <TechStack />
 
   <!-- Methodology Section -->
-  <section id="metodologia" class="py-24 bg-ink/[0.03]">
+  <section id="metodologia" class="py-24 bg-gold">
     <div class="max-w-7xl mx-auto px-6">
       <div class="reveal mb-16">
-        <h2 class="text-sm font-bold tracking-[0.2em] text-accent-600 uppercase mb-4">Metodología B2B</h2>
+        <h2 class="text-sm font-bold tracking-[0.2em] text-accent-700 uppercase mb-4">Metodología B2B</h2>
         <h3 class="text-3xl md:text-4xl font-bold text-ink">Enfoque estratégico para resultados tangibles</h3>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-px bg-ink/10 rounded-2xl overflow-hidden border border-ink/10">
+      <div class="grid md:grid-cols-3 gap-px bg-ink/10 rounded-2xl overflow-hidden border border-ink/10 shadow-xl shadow-ink/10">
         <div class="reveal group bg-paper p-10 hover:bg-white transition-colors">
-          <span class="font-serif italic text-4xl text-accent-600/40 group-hover:text-accent-600 transition-colors">01</span>
+          <span class="font-serif italic text-4xl text-ink/25 group-hover:text-accent-700 transition-colors">01</span>
           <h4 class="text-xl font-bold mt-4 mb-3">Arquitectura y Diseño</h4>
           <p class="text-ink/60">Prototipado en Figma centrado en la conversión y la experiencia del usuario final.</p>
         </div>
 
         <div class="reveal group bg-paper p-10 hover:bg-white transition-colors [transition-delay:80ms]">
-          <span class="font-serif italic text-4xl text-accent-600/40 group-hover:text-accent-600 transition-colors">02</span>
+          <span class="font-serif italic text-4xl text-ink/25 group-hover:text-accent-700 transition-colors">02</span>
           <h4 class="text-xl font-bold mt-4 mb-3">Desarrollo Ágil</h4>
           <p class="text-ink/60">Stack moderno y seguro para máxima eficiencia en el procesamiento y escalabilidad.</p>
         </div>
 
         <div class="reveal group bg-paper p-10 hover:bg-white transition-colors [transition-delay:160ms]">
-          <span class="font-serif italic text-4xl text-accent-600/40 group-hover:text-accent-600 transition-colors">03</span>
+          <span class="font-serif italic text-4xl text-ink/25 group-hover:text-accent-700 transition-colors">03</span>
           <h4 class="text-xl font-bold mt-4 mb-3">Desarrollo Cloud</h4>
           <p class="text-ink/60">Alojamiento en Vercel con monitoreo 24/7 y despliegue continuo (CI/CD).</p>
         </div>
