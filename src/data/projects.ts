@@ -51,7 +51,7 @@ export const projects: Project[] = [
       'Desarrollo: catálogo filtrable por categoría y talla, ficha de producto y carrito que termina la compra por WhatsApp.',
       'Entrega: despliegue en Vercel y ajustes de catálogo según la rotación real de mercadería.',
     ],
-    tecnologias: ['Vue 3', 'TypeScript', 'Supabase', 'Tailwind CSS', 'Vercel'],
+    tecnologias: ['Next.js', 'Tailwind CSS', 'Cloudinary', 'Vercel'],
     status: 'Completado',
     ilustracion: '/proyectos/ecommerce.svg',
     mockup: '/proyectos/mockups/bithia-web.html',
