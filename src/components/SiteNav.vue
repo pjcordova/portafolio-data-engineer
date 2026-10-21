@@ -7,7 +7,8 @@ const menuOpen = ref(false);
 <template>
   <nav class="sticky top-0 z-50 bg-paper/80 backdrop-blur-md border-b border-ink/10">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-      <RouterLink to="/" class="text-xl font-bold tracking-tighter text-ink">
+      <RouterLink to="/" class="flex items-center gap-2.5 text-xl font-bold tracking-tighter text-ink">
+        <img src="/logo-icon.png" alt="" class="w-8 h-8" />
         CORDOVA SOLUTIONS<span class="text-accent-600">.</span>
       </RouterLink>
       <div class="hidden md:flex gap-8 text-sm font-medium">
