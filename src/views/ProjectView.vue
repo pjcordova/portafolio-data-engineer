@@ -1,19 +1,15 @@
 <script setup lang="ts">
-import { computed, watchEffect } from 'vue';
+import { computed } from 'vue';
 import { useRoute } from 'vue-router';
 import { projects } from '../data/projects';
 import ProjectCard from '../components/ProjectCard.vue';
 import SiteNav from '../components/SiteNav.vue';
 import SiteFooter from '../components/SiteFooter.vue';
 
+// Page title is set centrally in src/router/index.ts (afterEach), so it
+// always matches the current route, even after navigating back to "/".
 const route = useRoute();
 const project = computed(() => projects.find((p) => p.slug === route.params.slug));
-
-watchEffect(() => {
-  document.title = project.value
-    ? `${project.value.nombre} | Cordova Solutions`
-    : 'Proyecto no encontrado | Cordova Solutions';
-});
 </script>
 
 <template>
