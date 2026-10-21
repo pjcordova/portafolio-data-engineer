@@ -52,8 +52,9 @@ onMounted(() => {
           </p>
           <div class="animate-fade-up [animation-delay:270ms] flex flex-wrap gap-4">
             <a href="#proyectos"
-               class="btn-press px-8 py-4 bg-ink text-paper rounded-lg font-bold shadow-lg shadow-ink/10 hover:shadow-xl hover:shadow-ink/15 transition-shadow">
+               class="btn-press group px-8 py-4 bg-ink text-paper rounded-lg font-bold shadow-lg shadow-ink/10 hover:shadow-xl hover:shadow-ink/15 transition-shadow inline-flex items-center gap-2">
               Ver Casos de Éxito
+              <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
             </a>
             <a href="#contacto"
                class="btn-press px-8 py-4 bg-transparent text-ink border-2 border-ink/15 rounded-lg font-bold hover:border-ink/40 transition-colors">

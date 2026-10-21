@@ -20,7 +20,7 @@ defineProps<{
         <div class="flex flex-wrap justify-between items-start mb-4 gap-4">
           <div>
             <span class="text-xs font-bold tracking-widest text-ink/40 uppercase">{{ project.categoria }}</span>
-            <h3 class="text-2xl font-bold text-ink mt-1">{{ project.nombre }}</h3>
+            <h3 class="text-2xl font-serif italic font-normal text-ink mt-1">{{ project.nombre }}</h3>
             <p v-if="project.cliente" class="text-ink/50 font-medium">Cliente: {{ project.cliente }}</p>
           </div>
           <span v-if="project.status"
@@ -83,11 +83,9 @@ defineProps<{
         </div>
       </div>
       <div class="rounded-lg border border-ink/10 bg-white overflow-hidden shadow-sm">
-        <div class="flex items-center gap-1.5 px-3 py-2 bg-ink/[0.03] border-b border-ink/10">
-          <span class="w-2.5 h-2.5 rounded-full bg-red-300"></span>
-          <span class="w-2.5 h-2.5 rounded-full bg-amber-300"></span>
-          <span class="w-2.5 h-2.5 rounded-full bg-emerald-300"></span>
-          <span class="ml-3 text-[11px] text-ink/30 font-mono">maqueta — datos de ejemplo</span>
+        <div class="flex items-center gap-2 px-3 py-2 bg-ink/[0.03] border-b border-ink/10">
+          <span class="w-1.5 h-1.5 rounded-full bg-accent-500"></span>
+          <span class="text-[11px] text-ink/30 font-mono">maqueta — datos de ejemplo</span>
         </div>
         <iframe :src="project.mockup"
                 title="Maqueta referencial de la solución"
