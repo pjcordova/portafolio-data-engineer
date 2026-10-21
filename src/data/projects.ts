@@ -88,5 +88,6 @@ export const projects: Project[] = [
     ilustracion: '/proyectos/edtech-ia.svg',
     mockup: '/proyectos/mockups/aibplus.html',
     mockupAlto: 'h-[520px]',
+    linkSitio: 'https://aibplus.app/',
   },
 ];
