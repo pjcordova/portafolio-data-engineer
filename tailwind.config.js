@@ -10,12 +10,12 @@ export default {
         ink: '#131210',
         paper: '#FAF8F4',
         accent: {
-          50: '#FFF4ED',
-          100: '#FFE4D2',
-          300: '#FDBA8C',
-          500: '#E35D25',
-          600: '#C2410C',
-          700: '#9A3412',
+          50: '#EEF2FF',
+          100: '#DCE4FF',
+          300: '#94A9FF',
+          500: '#2F5BFF',
+          600: '#1F43E6',
+          700: '#1733B3',
         },
       },
       fontFamily: {

@@ -192,13 +192,13 @@ body {
   bottom: -4px;
   width: 100%;
   height: 1.5px;
-  background: #C2410C;
+  background: #2F5BFF;
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .nav-link:hover {
-  color: #C2410C;
+  color: #2F5BFF;
 }
 .nav-link:hover::after {
   transform: scaleX(1);
