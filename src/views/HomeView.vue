@@ -20,40 +20,41 @@ const photoMissing = ref(false);
   <SiteNav />
 
   <!-- Hero Section -->
-  <header class="relative pt-20 pb-32 overflow-hidden">
-    <div class="absolute -top-24 right-0 w-[560px] h-[560px] rounded-full bg-accent-100/70 blur-3xl -z-10"></div>
+  <header class="relative pt-20 pb-32 overflow-hidden bg-ink">
+    <div class="absolute -top-24 right-0 w-[560px] h-[560px] rounded-full bg-accent-500/20 blur-3xl -z-10"></div>
+    <div class="absolute bottom-0 left-0 w-[420px] h-[420px] rounded-full bg-gold/10 blur-3xl -z-10"></div>
 
     <div class="max-w-7xl mx-auto px-6 relative z-10">
       <div class="grid lg:grid-cols-[1fr_360px] gap-12 lg:gap-16 items-center">
         <div class="max-w-3xl">
-          <p class="animate-fade-up text-xs font-bold tracking-[0.25em] text-accent-600 uppercase mb-6">
+          <p class="animate-fade-up text-xs font-bold tracking-[0.25em] text-accent-500 uppercase mb-6">
             Desarrollo Full Stack · B2B
           </p>
-          <h1 class="animate-fade-up [animation-delay:90ms] text-5xl md:text-7xl font-bold tracking-tight text-ink leading-[1.1] mb-8">
-            Transformo procesos complejos en <span class="font-serif italic text-accent-600 font-normal">soluciones digitales</span> rentables.
+          <h1 class="animate-fade-up [animation-delay:90ms] text-5xl md:text-7xl font-bold tracking-tight text-paper leading-[1.1] mb-8">
+            Transformo procesos complejos en <span class="font-serif italic text-accent-500 font-normal">soluciones digitales</span> rentables.
           </h1>
-          <p class="animate-fade-up [animation-delay:180ms] text-xl md:text-2xl text-ink/50 mb-10 leading-relaxed font-light">
+          <p class="animate-fade-up [animation-delay:180ms] text-xl md:text-2xl text-paper/50 mb-10 leading-relaxed font-light">
             Cordova Solutions | Desarrollo Full Stack Especializado en E-commerce, ERPs y Soluciones Cloud.
           </p>
           <div class="animate-fade-up [animation-delay:270ms] flex flex-wrap gap-4">
             <a href="#proyectos"
-               class="btn-press group px-8 py-4 bg-ink text-paper rounded-lg font-bold shadow-lg shadow-ink/10 hover:shadow-xl hover:shadow-ink/15 transition-shadow inline-flex items-center gap-2">
+               class="btn-press group px-8 py-4 bg-paper text-ink rounded-lg font-bold shadow-lg shadow-ink/30 hover:shadow-xl transition-shadow inline-flex items-center gap-2">
               Ver Casos de Éxito
               <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
             </a>
             <a href="#contacto"
-               class="btn-press px-8 py-4 bg-transparent text-ink border-2 border-ink/15 rounded-lg font-bold hover:border-ink/40 transition-colors">
+               class="btn-press px-8 py-4 bg-transparent text-paper border-2 border-paper/20 rounded-lg font-bold hover:border-paper/50 transition-colors">
               Hablemos de tu Proyecto
             </a>
           </div>
         </div>
 
         <!-- Photo frame: drop an image at public/piero.jpg to replace the placeholder -->
-        <div class="animate-fade-up [animation-delay:150ms] relative aspect-[4/5] w-full max-w-sm mx-auto lg:max-w-none rounded-3xl overflow-hidden border border-ink/10 bg-gradient-to-br from-accent-100 via-paper to-accent-50 shadow-xl shadow-ink/5">
+        <div class="animate-fade-up [animation-delay:150ms] relative aspect-[4/5] w-full max-w-sm mx-auto lg:max-w-none rounded-3xl overflow-hidden border border-paper/10 bg-gradient-to-br from-accent-700/40 via-ink to-gold-dark/30 shadow-xl shadow-ink/40">
           <img v-show="!photoMissing" :src="photoSrc" alt="Piero Cordova"
                class="absolute inset-0 w-full h-full object-cover"
                @error="photoMissing = true" @load="photoMissing = false" />
-          <div v-if="photoMissing" class="absolute inset-0 flex flex-col items-center justify-center gap-3 text-accent-600/40">
+          <div v-if="photoMissing" class="absolute inset-0 flex flex-col items-center justify-center gap-3 text-paper/30">
             <svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
             <span class="text-xs font-bold uppercase tracking-widest">Tu foto aquí</span>
           </div>
