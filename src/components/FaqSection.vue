@@ -32,12 +32,12 @@ function toggle(i: number) {
 </script>
 
 <template>
-  <section id="faq" class="reveal py-24 bg-ink">
+  <section id="faq" class="reveal py-24 bg-accent-700">
     <div class="max-w-3xl mx-auto px-6">
       <div class="text-center mb-14">
-        <h2 class="text-sm font-bold tracking-[0.2em] text-accent-300 uppercase mb-4">Preguntas Frecuentes</h2>
+        <h2 class="text-sm font-bold tracking-[0.2em] text-paper/50 uppercase mb-4">Preguntas Frecuentes</h2>
         <h3 class="text-3xl md:text-4xl font-bold text-paper">
-          Antes de <span class="font-serif italic text-accent-300 font-normal">escribirme</span>
+          Antes de <span class="font-serif italic text-gold-light font-normal">escribirme</span>
         </h3>
       </div>
 

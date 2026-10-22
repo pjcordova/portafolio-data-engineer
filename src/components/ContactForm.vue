@@ -17,7 +17,7 @@ function handleSubmit() {
 </script>
 
 <template>
-  <section id="contacto" class="reveal py-14 bg-accent-700">
+  <section id="contacto" class="reveal py-14 bg-ink">
     <div class="max-w-2xl mx-auto px-6">
       <div class="text-center mb-8">
         <h2 class="text-sm font-bold tracking-[0.2em] text-paper/50 uppercase mb-3">Hablemos</h2>
