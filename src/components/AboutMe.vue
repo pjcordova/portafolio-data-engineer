@@ -7,10 +7,10 @@ const photoMissing = ref(false);
 </script>
 
 <template>
-  <section id="sobre-mi" class="py-24 bg-paper">
+  <section id="sobre-mi" class="py-14 bg-paper">
     <div class="max-w-7xl mx-auto px-6">
-      <div class="grid lg:grid-cols-[360px_1fr] gap-12 lg:gap-16 items-center">
-        <div class="reveal relative aspect-[4/5] w-full max-w-sm mx-auto lg:max-w-none rounded-3xl overflow-hidden border border-ink/10 bg-gradient-to-br from-accent-50 via-paper to-gold/10 shadow-xl shadow-ink/5">
+      <div class="grid lg:grid-cols-[260px_1fr] gap-10 lg:gap-12 items-center">
+        <div class="reveal relative aspect-[4/5] w-full max-w-[260px] mx-auto rounded-3xl overflow-hidden border border-ink/10 bg-gradient-to-br from-accent-50 via-paper to-gold/10 shadow-xl shadow-ink/5">
           <img v-show="!photoMissing" :src="photoSrc" alt="Piero Cordova"
                class="absolute inset-0 w-full h-full object-cover"
                @error="photoMissing = true" @load="photoMissing = false" />
@@ -21,11 +21,11 @@ const photoMissing = ref(false);
         </div>
 
         <div class="reveal">
-          <h2 class="text-sm font-bold tracking-[0.2em] text-accent-600 uppercase mb-4">Sobre Mí</h2>
-          <h3 class="text-3xl md:text-4xl font-bold text-ink mb-6 leading-tight">
+          <h2 class="text-xs font-bold tracking-[0.2em] text-accent-600 uppercase mb-2">Sobre Mí</h2>
+          <h3 class="text-2xl md:text-3xl font-bold text-ink mb-4 leading-tight">
             Software que se adapta a <span class="font-serif italic text-accent-600 font-normal">tu negocio</span>, no al revés.
           </h3>
-          <div class="space-y-4 text-ink/60 leading-relaxed mb-10 max-w-2xl">
+          <div class="space-y-3 text-sm text-ink/60 leading-relaxed mb-6 max-w-2xl">
             <p>
               Soy Piero Cordova, fundador de Cordova Solutions. Empecé a programar en la universidad
               — desde quinto ciclo ya estaba metido en proyectos reales — y hoy, en décimo ciclo, los
@@ -42,20 +42,20 @@ const photoMissing = ref(false);
             </p>
           </div>
 
-          <div class="grid sm:grid-cols-3 gap-6">
+          <div class="grid sm:grid-cols-3 gap-4">
             <div>
-              <span class="font-serif italic text-2xl text-accent-600">01</span>
-              <p class="text-sm font-bold text-ink mt-2 mb-1">Cercanía real</p>
+              <span class="font-serif italic text-xl text-accent-600">01</span>
+              <p class="text-sm font-bold text-ink mt-1 mb-0.5">Cercanía real</p>
               <p class="text-xs text-ink/50 leading-relaxed">Hablas directo conmigo, no con un intermediario.</p>
             </div>
             <div>
-              <span class="font-serif italic text-2xl text-accent-600">02</span>
-              <p class="text-sm font-bold text-ink mt-2 mb-1">Procesos primero</p>
+              <span class="font-serif italic text-xl text-accent-600">02</span>
+              <p class="text-sm font-bold text-ink mt-1 mb-0.5">Procesos primero</p>
               <p class="text-xs text-ink/50 leading-relaxed">Si no encaja con cómo trabaja tu empresa, no sirve.</p>
             </div>
             <div>
-              <span class="font-serif italic text-2xl text-accent-600">03</span>
-              <p class="text-sm font-bold text-ink mt-2 mb-1">Fácil de usar</p>
+              <span class="font-serif italic text-xl text-accent-600">03</span>
+              <p class="text-sm font-bold text-ink mt-1 mb-0.5">Fácil de usar</p>
               <p class="text-xs text-ink/50 leading-relaxed">Curva de aprendizaje baja, eficiente en el trabajo diario.</p>
             </div>
           </div>

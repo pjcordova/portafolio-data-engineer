@@ -30,24 +30,24 @@ const categories = [
 </script>
 
 <template>
-  <section class="reveal py-20 bg-accent-700 overflow-hidden">
+  <section class="reveal py-12 bg-accent-700 overflow-hidden">
     <div class="max-w-7xl mx-auto px-6">
-      <p class="text-center text-xs font-bold tracking-[0.2em] text-paper/50 uppercase mb-4">
+      <p class="text-center text-xs font-bold tracking-[0.2em] text-paper/50 uppercase mb-3">
         Stack Técnico
       </p>
-      <h2 class="text-center text-3xl md:text-4xl font-bold text-paper mb-12">
+      <h2 class="text-center text-xl md:text-2xl font-bold text-paper mb-6">
         Tecnologías con las que <span class="font-serif italic font-normal text-gold-light">trabajo</span>
       </h2>
-      <div class="grid sm:grid-cols-3 gap-5 max-w-5xl mx-auto">
+      <div class="grid sm:grid-cols-3 gap-4 max-w-5xl mx-auto">
         <div v-for="category in categories" :key="category.label"
-             class="bg-paper border border-ink/5 shadow-xl shadow-ink/10 rounded-2xl p-7">
-          <h3 class="text-xs font-bold tracking-[0.15em] text-ink uppercase mb-5 pb-3 border-b border-ink/10">
+             class="bg-paper border border-ink/5 shadow-xl shadow-ink/10 rounded-2xl p-5">
+          <h3 class="text-xs font-bold tracking-[0.15em] text-ink uppercase mb-3 pb-2 border-b border-ink/10">
             {{ category.label }}
           </h3>
-          <div class="space-y-3.5">
+          <div class="space-y-2.5">
             <div v-for="tech in category.techs" :key="tech.name"
                  class="group flex items-center gap-3">
-              <svg class="w-5 h-5 flex-shrink-0 transition-transform duration-300 group-hover:-translate-y-0.5"
+              <svg class="w-4 h-4 flex-shrink-0 transition-transform duration-300 group-hover:-translate-y-0.5"
                    viewBox="0 0 24 24" :fill="tech.color">
                 <path :d="tech.d" />
               </svg>

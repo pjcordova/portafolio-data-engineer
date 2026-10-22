@@ -1,7 +1,7 @@
 <template>
   <footer class="bg-ink text-paper">
-    <div class="max-w-7xl mx-auto px-6 py-20">
-      <div class="reveal grid sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1fr] gap-12">
+    <div class="max-w-7xl mx-auto px-6 py-12">
+      <div class="reveal grid sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1fr] gap-10">
         <div>
           <RouterLink to="/" class="flex items-center gap-2.5 text-lg font-bold tracking-tighter mb-4">
             <img src="/logo-icon.png" alt="" class="w-8 h-8" />
@@ -47,7 +47,7 @@
         </div>
       </div>
 
-      <div class="mt-16 pt-8 border-t border-paper/10 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-paper/40">
+      <div class="mt-8 pt-6 border-t border-paper/10 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-paper/40">
         <p>© 2026 Cordova Solutions. Todos los derechos reservados.</p>
         <p>Desarrollado por Piero Cordova</p>
       </div>
