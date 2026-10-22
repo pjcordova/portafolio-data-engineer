@@ -5,6 +5,7 @@ import ProjectGalleryCard from '../components/ProjectGalleryCard.vue';
 import SiteNav from '../components/SiteNav.vue';
 import SiteFooter from '../components/SiteFooter.vue';
 import TechStack from '../components/TechStack.vue';
+import AboutMe from '../components/AboutMe.vue';
 import { useReveal } from '../composables/useReveal';
 
 useReveal();
@@ -116,6 +117,8 @@ const photoMissing = ref(false);
       </div>
     </div>
   </section>
+
+  <AboutMe />
 
   <SiteFooter />
 </template>

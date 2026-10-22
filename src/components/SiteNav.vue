@@ -15,6 +15,7 @@ const menuOpen = ref(false);
       <div class="hidden md:flex gap-8 text-sm font-medium">
         <RouterLink :to="{ path: '/', hash: '#metodologia' }" class="nav-link">Metodología</RouterLink>
         <RouterLink :to="{ path: '/', hash: '#proyectos' }" class="nav-link">Casos de Éxito</RouterLink>
+        <RouterLink :to="{ path: '/', hash: '#sobre-mi' }" class="nav-link">Sobre Mí</RouterLink>
         <RouterLink :to="{ path: '/', hash: '#contacto' }" class="nav-link">Contacto</RouterLink>
       </div>
       <button
@@ -32,6 +33,7 @@ const menuOpen = ref(false);
       <div v-show="menuOpen" class="md:hidden border-t border-ink/10 bg-paper px-6 py-4 flex flex-col gap-4 text-sm font-medium">
         <RouterLink :to="{ path: '/', hash: '#metodologia' }" class="nav-link" @click="menuOpen = false">Metodología</RouterLink>
         <RouterLink :to="{ path: '/', hash: '#proyectos' }" class="nav-link" @click="menuOpen = false">Casos de Éxito</RouterLink>
+        <RouterLink :to="{ path: '/', hash: '#sobre-mi' }" class="nav-link" @click="menuOpen = false">Sobre Mí</RouterLink>
         <RouterLink :to="{ path: '/', hash: '#contacto' }" class="nav-link" @click="menuOpen = false">Contacto</RouterLink>
       </div>
     </Transition>
