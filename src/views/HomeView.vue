@@ -74,29 +74,29 @@ const photoMissing = ref(false);
   <TechStack />
 
   <!-- Methodology Section -->
-  <section id="metodologia" class="py-14 bg-gold">
+  <section id="metodologia" class="py-14 bg-ink">
     <div class="max-w-7xl mx-auto px-6">
       <div class="reveal mb-8">
         <h2 class="inline-block text-xs font-bold tracking-[0.15em] text-ink uppercase mb-3 px-3 py-1 bg-paper rounded-full shadow-sm">Metodología B2B</h2>
         <h3 class="text-2xl md:text-3xl font-bold text-paper">Enfoque estratégico para resultados tangibles</h3>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-px bg-ink/10 rounded-2xl overflow-hidden border border-ink/10 shadow-xl shadow-ink/10">
-        <div class="reveal group bg-paper p-6 hover:bg-white transition-colors">
+      <div class="grid md:grid-cols-3 gap-px bg-paper/10 rounded-2xl overflow-hidden border border-paper/10 shadow-xl shadow-ink/30">
+        <div class="reveal group bg-gold p-6 hover:bg-gold-light transition-colors">
           <span class="font-serif italic text-2xl text-ink/50 group-hover:text-accent-700 transition-colors">01</span>
-          <h4 class="text-lg font-bold mt-2 mb-1.5">Arquitectura y Diseño</h4>
+          <h4 class="text-lg font-bold mt-2 mb-1.5 text-ink">Arquitectura y Diseño</h4>
           <p class="text-sm text-ink/60">Prototipado en Figma centrado en la conversión y la experiencia del usuario final.</p>
         </div>
 
-        <div class="reveal group bg-paper p-6 hover:bg-white transition-colors [transition-delay:80ms]">
+        <div class="reveal group bg-gold p-6 hover:bg-gold-light transition-colors [transition-delay:80ms]">
           <span class="font-serif italic text-2xl text-ink/50 group-hover:text-accent-700 transition-colors">02</span>
-          <h4 class="text-lg font-bold mt-2 mb-1.5">Desarrollo Ágil</h4>
+          <h4 class="text-lg font-bold mt-2 mb-1.5 text-ink">Desarrollo Ágil</h4>
           <p class="text-sm text-ink/60">Stack moderno y seguro para máxima eficiencia en el procesamiento y escalabilidad.</p>
         </div>
 
-        <div class="reveal group bg-paper p-6 hover:bg-white transition-colors [transition-delay:160ms]">
+        <div class="reveal group bg-gold p-6 hover:bg-gold-light transition-colors [transition-delay:160ms]">
           <span class="font-serif italic text-2xl text-ink/50 group-hover:text-accent-700 transition-colors">03</span>
-          <h4 class="text-lg font-bold mt-2 mb-1.5">Desarrollo Cloud</h4>
+          <h4 class="text-lg font-bold mt-2 mb-1.5 text-ink">Desarrollo Cloud</h4>
           <p class="text-sm text-ink/60">Alojamiento en Vercel con monitoreo 24/7 y despliegue continuo (CI/CD).</p>
         </div>
       </div>
