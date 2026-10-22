@@ -69,6 +69,28 @@ const photoMissing = ref(false);
 
   <TechStack />
 
+  <!-- Success Cases Section -->
+  <section id="proyectos" class="py-24 bg-paper">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="reveal mb-16 flex flex-wrap justify-between items-end gap-6">
+        <div class="max-w-2xl">
+          <h2 class="text-sm font-bold tracking-[0.2em] text-accent-600 uppercase mb-4">Portafolio</h2>
+          <h3 class="text-3xl md:text-4xl font-bold text-ink">Casos de Éxito & Proyectos Destacados</h3>
+        </div>
+      </div>
+
+      <div v-if="projects.length === 0" class="text-center py-20 bg-ink/[0.03] rounded-2xl border border-dashed border-ink/15">
+        <p class="text-ink/50">No se encontraron proyectos disponibles.</p>
+      </div>
+
+      <div v-else class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div v-for="project in projects" :key="project.slug" class="reveal">
+          <ProjectGalleryCard :project="project" />
+        </div>
+      </div>
+    </div>
+  </section>
+
   <FaqSection />
 
   <!-- Methodology Section -->
@@ -96,28 +118,6 @@ const photoMissing = ref(false);
           <span class="font-serif italic text-4xl text-ink/50 group-hover:text-accent-700 transition-colors">03</span>
           <h4 class="text-xl font-bold mt-4 mb-3">Desarrollo Cloud</h4>
           <p class="text-ink/60">Alojamiento en Vercel con monitoreo 24/7 y despliegue continuo (CI/CD).</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Success Cases Section -->
-  <section id="proyectos" class="py-24 bg-paper">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="reveal mb-16 flex flex-wrap justify-between items-end gap-6">
-        <div class="max-w-2xl">
-          <h2 class="text-sm font-bold tracking-[0.2em] text-accent-600 uppercase mb-4">Portafolio</h2>
-          <h3 class="text-3xl md:text-4xl font-bold text-ink">Casos de Éxito & Proyectos Destacados</h3>
-        </div>
-      </div>
-
-      <div v-if="projects.length === 0" class="text-center py-20 bg-ink/[0.03] rounded-2xl border border-dashed border-ink/15">
-        <p class="text-ink/50">No se encontraron proyectos disponibles.</p>
-      </div>
-
-      <div v-else class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div v-for="project in projects" :key="project.slug" class="reveal">
-          <ProjectGalleryCard :project="project" />
         </div>
       </div>
     </div>
