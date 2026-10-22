@@ -81,23 +81,23 @@ const photoMissing = ref(false);
         <h3 class="text-2xl md:text-3xl font-bold text-paper">Enfoque estratégico para resultados tangibles</h3>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-px bg-paper/10 rounded-2xl overflow-hidden border border-paper/10 shadow-xl shadow-ink/30">
-        <div class="reveal group bg-gold p-6 hover:bg-gold-light transition-colors">
-          <span class="font-serif italic text-2xl text-paper/70 group-hover:text-ink transition-colors">01</span>
+      <div class="grid md:grid-cols-3 gap-5">
+        <div class="reveal group bg-paper/5 border border-gold/25 hover:border-gold/60 hover:bg-paper/[0.07] rounded-2xl p-6 transition-colors">
+          <span class="font-serif italic text-2xl text-gold group-hover:text-gold-light transition-colors">01</span>
           <h4 class="text-lg font-bold mt-2 mb-1.5 text-paper">Arquitectura y Diseño</h4>
-          <p class="text-sm text-paper/80">Prototipado en Figma centrado en la conversión y la experiencia del usuario final.</p>
+          <p class="text-sm text-paper/60">Prototipado en Figma centrado en la conversión y la experiencia del usuario final.</p>
         </div>
 
-        <div class="reveal group bg-gold p-6 hover:bg-gold-light transition-colors [transition-delay:80ms]">
-          <span class="font-serif italic text-2xl text-paper/70 group-hover:text-ink transition-colors">02</span>
+        <div class="reveal group bg-paper/5 border border-gold/25 hover:border-gold/60 hover:bg-paper/[0.07] rounded-2xl p-6 transition-colors [transition-delay:80ms]">
+          <span class="font-serif italic text-2xl text-gold group-hover:text-gold-light transition-colors">02</span>
           <h4 class="text-lg font-bold mt-2 mb-1.5 text-paper">Desarrollo Ágil</h4>
-          <p class="text-sm text-paper/80">Stack moderno y seguro para máxima eficiencia en el procesamiento y escalabilidad.</p>
+          <p class="text-sm text-paper/60">Stack moderno y seguro para máxima eficiencia en el procesamiento y escalabilidad.</p>
         </div>
 
-        <div class="reveal group bg-gold p-6 hover:bg-gold-light transition-colors [transition-delay:160ms]">
-          <span class="font-serif italic text-2xl text-paper/70 group-hover:text-ink transition-colors">03</span>
+        <div class="reveal group bg-paper/5 border border-gold/25 hover:border-gold/60 hover:bg-paper/[0.07] rounded-2xl p-6 transition-colors [transition-delay:160ms]">
+          <span class="font-serif italic text-2xl text-gold group-hover:text-gold-light transition-colors">03</span>
           <h4 class="text-lg font-bold mt-2 mb-1.5 text-paper">Desarrollo Cloud</h4>
-          <p class="text-sm text-paper/80">Alojamiento en Vercel con monitoreo 24/7 y despliegue continuo (CI/CD).</p>
+          <p class="text-sm text-paper/60">Alojamiento en Vercel con monitoreo 24/7 y despliegue continuo (CI/CD).</p>
         </div>
       </div>
     </div>
