@@ -30,14 +30,15 @@ const categories = [
 </script>
 
 <template>
-  <section class="reveal py-16 bg-accent-600 overflow-hidden">
+  <section class="reveal py-20 bg-accent-700 overflow-hidden">
     <div class="max-w-7xl mx-auto px-6">
       <p class="text-center text-xs font-bold tracking-[0.2em] text-paper/50 uppercase mb-12">
         Tecnologías con las que trabajo
       </p>
-      <div class="grid sm:grid-cols-3 gap-10 max-w-4xl mx-auto">
-        <div v-for="category in categories" :key="category.label">
-          <h3 class="text-xs font-bold tracking-[0.15em] text-paper uppercase mb-5 pb-3 border-b border-paper/20">
+      <div class="grid sm:grid-cols-3 gap-5 max-w-5xl mx-auto">
+        <div v-for="category in categories" :key="category.label"
+             class="bg-paper/[0.07] backdrop-blur-sm border border-paper/10 rounded-2xl p-7">
+          <h3 class="text-xs font-bold tracking-[0.15em] text-paper uppercase mb-5 pb-3 border-b border-paper/15">
             {{ category.label }}
           </h3>
           <div class="space-y-3.5">
