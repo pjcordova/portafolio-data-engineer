@@ -30,14 +30,14 @@ const categories = [
 </script>
 
 <template>
-  <section class="reveal py-16 bg-paper border-y border-ink/10 overflow-hidden">
+  <section class="reveal py-16 bg-accent-600 overflow-hidden">
     <div class="max-w-7xl mx-auto px-6">
-      <p class="text-center text-xs font-bold tracking-[0.2em] text-ink/40 uppercase mb-12">
+      <p class="text-center text-xs font-bold tracking-[0.2em] text-paper/50 uppercase mb-12">
         Tecnologías con las que trabajo
       </p>
       <div class="grid sm:grid-cols-3 gap-10 max-w-4xl mx-auto">
         <div v-for="category in categories" :key="category.label">
-          <h3 class="text-xs font-bold tracking-[0.15em] text-accent-600 uppercase mb-5 pb-3 border-b border-ink/10">
+          <h3 class="text-xs font-bold tracking-[0.15em] text-paper uppercase mb-5 pb-3 border-b border-paper/20">
             {{ category.label }}
           </h3>
           <div class="space-y-3.5">
@@ -47,7 +47,7 @@ const categories = [
                    viewBox="0 0 24 24" :fill="tech.color">
                 <path :d="tech.d" />
               </svg>
-              <span class="text-sm font-medium text-ink/70">
+              <span class="text-sm font-medium text-paper/80">
                 {{ tech.name }}
               </span>
             </div>
