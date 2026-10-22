@@ -73,6 +73,16 @@ const photoMissing = ref(false);
 
   <TechStack />
 
+  <!-- Pull-quote breather -->
+  <section class="reveal py-20 bg-paper">
+    <div class="max-w-2xl mx-auto px-6 text-center">
+      <p class="text-3xl md:text-5xl font-serif italic text-ink leading-tight">
+        "La innovación no se mide en código. Se mide en lo que tu negocio logra con él."
+      </p>
+      <p class="mt-6 text-xs font-bold tracking-[0.2em] text-accent-600 uppercase">— Piero Cordova, Cordova Solutions</p>
+    </div>
+  </section>
+
   <!-- Methodology Section -->
   <section id="metodologia" class="py-14 bg-ink">
     <div class="max-w-7xl mx-auto px-6">
