@@ -30,8 +30,9 @@ const photoMissing = ref(false);
               Soy Piero Cordova, fundador de Cordova Solutions. Empecé a programar en la universidad
               — desde quinto ciclo ya estaba metido en proyectos reales — y hoy, en décimo ciclo, los
               sistemas que he construido ya los usan empresas de verdad: Chavely ERP ordena las finanzas
-              diarias de un negocio físico, Bithia Web vende en línea y AIB+ la acabo de lanzar como
-              plataforma de servicios.
+              diarias de un negocio físico, Bithia Web vende en línea, AIB+ la acabo de lanzar como
+              plataforma de servicios, y el sitio de Buen Vivir conecta a una consultora regenerativa
+              de Argentina con clientes de toda Latinoamérica.
             </p>
             <p>
               No desarrollo por desarrollar. Para mí un sistema solo sirve si resuelve el proceso real
