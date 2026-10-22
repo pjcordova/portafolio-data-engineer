@@ -64,6 +64,8 @@ const photoMissing = ref(false);
     </div>
   </header>
 
+  <AboutMe />
+
   <TechStack />
 
   <!-- Methodology Section -->
@@ -117,8 +119,6 @@ const photoMissing = ref(false);
       </div>
     </div>
   </section>
-
-  <AboutMe />
 
   <SiteFooter />
 </template>
