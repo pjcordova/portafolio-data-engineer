@@ -102,4 +102,29 @@ export const projects: Project[] = [
     mockupAlto: 'h-[520px]',
     linkSitio: 'https://aibplus.app/',
   },
+  {
+    slug: 'buen-vivir-web',
+    nombre: 'Buen Vivir',
+    cliente: 'Consultora Buen Vivir',
+    categoria: 'Sitio Web Corporativo + CMS',
+    problemaResuelto:
+      'Buen Vivir, consultora regenerativa de Belén Vera (Argentina), ofrecía 7 servicios agrupados en 3 caminos y una comunidad con 3 espacios, pero todo vivía en un sitio hecho en Canva y en publicaciones de Instagram — insuficiente para explicar una oferta compleja, dar confianza y, sobre todo, dejar que la propia clienta actualizara textos e imágenes sin depender de un programador.',
+    proceso: [
+      'Descubrimiento: se tomó el sitio anterior en Canva y las publicaciones de Instagram como fuente real de los textos y la oferta, para no reinventar lo que ya funcionaba.',
+      'Diseño: estructura bilingüe (español/inglés) desde el inicio, con identidad propia (tipografías Fraunces, Work Sans y Quicksand) y cada página pensada para terminar en un contacto concreto — agenda, WhatsApp o formulario.',
+      'Desarrollo: CMS a medida dentro del mismo Next.js (panel /admin con login propio por hash scrypt y sesión firmada con HMAC) para que la clienta edite 21 secciones de texto y 45 espacios de imagen/video sin tocar código; las imágenes se optimizan solas al subirlas.',
+      'Entrega: SEO técnico completo (metadatos, sitemap, datos estructurados), analítica de clics por canal de contacto, y resolución en producción de un problema real de cuota de almacenamiento (Vercel Blob) sin interrumpir el sitio.',
+    ],
+    tecnologias: ['Next.js 14', 'React 18', 'TypeScript', 'Tailwind CSS', 'Vercel Blob', 'Vercel Analytics', 'Vercel'],
+    status: 'Completado',
+    ilustracion: '/proyectos/regeneracion.svg',
+    mockup: '/proyectos/mockups/buen-vivir.html',
+    mockupAlto: 'h-[640px]',
+    resultados: [
+      'Panel de autogestión con 21 secciones de texto y 45 espacios de imagen/video, en español e inglés, editables sin depender de un programador.',
+      'Sitio bilingüe con 18 URLs indexadas, SEO técnico completo (Open Graph, sitemap, datos estructurados) y 4 animaciones hechas a mano que respetan "reducir movimiento".',
+      'Resuelta en producción una suspensión real del almacenamiento (Vercel Blob agotó su cuota) con caché en capas y pausa automática, sin bajar el sitio.',
+    ],
+    linkSitio: 'https://consultora-buenvivir-web.vercel.app/',
+  },
 ];

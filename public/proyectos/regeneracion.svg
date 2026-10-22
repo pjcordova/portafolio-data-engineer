@@ -1,0 +1,35 @@
+<svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-regeneracion" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F3F6EF"/>
+      <stop offset="100%" stop-color="#DCE6D6"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="240" fill="url(#bg-regeneracion)"/>
+  <circle cx="335" cy="45" r="60" fill="#B9D6AE" opacity="0.4"/>
+  <circle cx="45" cy="205" r="46" fill="#B9875A" opacity="0.18"/>
+
+  <g stroke="#3A5A40" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M200 70 v100"/>
+    <path d="M200 90 c-18 -14 -40 -10 -48 6"/>
+    <path d="M200 110 c20 -16 44 -10 52 8"/>
+    <path d="M200 130 c-16 -10 -34 -6 -42 8"/>
+  </g>
+  <g fill="#4F7A52">
+    <ellipse cx="150" cy="92" rx="16" ry="10" transform="rotate(-25 150 92)"/>
+    <ellipse cx="256" cy="112" rx="18" ry="11" transform="rotate(20 256 112)"/>
+    <ellipse cx="156" cy="134" rx="14" ry="9" transform="rotate(-15 156 134)"/>
+  </g>
+
+  <g stroke="#8B6B45" stroke-width="2" fill="none" stroke-linecap="round">
+    <path d="M200 170 c-14 12 -26 14 -40 10"/>
+    <path d="M200 170 c14 12 26 14 40 10"/>
+    <path d="M200 170 v24"/>
+  </g>
+
+  <g fill="#3A5A40" opacity="0.7">
+    <circle cx="110" cy="60" r="3"/>
+    <circle cx="300" cy="170" r="3"/>
+    <circle cx="90" cy="150" r="2.5"/>
+  </g>
+</svg>

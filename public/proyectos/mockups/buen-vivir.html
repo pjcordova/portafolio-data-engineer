@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Maqueta referencial — Buen Vivir</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+  :root { --forest:#3A5A40; --sage:#8FAF8B; --cream:#F7F4EC; --clay:#B9875A; }
+  body { background:var(--cream); font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color:#2F3B2C; }
+  .serif { font-family: Georgia, Cambria, "Times New Roman", serif; }
+  .badge-demo { font-size:.6rem; letter-spacing:.04em; }
+  .navbar-bv { background:var(--cream); border-bottom:1px solid #e3ddcd; }
+  .navbar-bv a { color:#2F3B2C !important; font-size:.85rem; }
+  .lang-pill { border:1px solid #d8d2c0; border-radius:999px; padding:.2rem .7rem; font-size:.7rem; font-weight:700; background:#fff; }
+  .hero-bv { background:linear-gradient(135deg,#EFEADC,#DCE6D6); padding:60px 0; }
+  .btn-forest { background:var(--forest); color:#fff; font-weight:600; }
+  .btn-outline-forest { border:1px solid var(--forest); color:var(--forest); }
+  .camino-card { background:#fff; border:1px solid #e7e2d4; border-radius:1rem; padding:1.5rem; height:100%; }
+  .camino-card .icon { width:44px; height:44px; border-radius:50%; background:#E7EFE3; display:flex; align-items:center; justify-content:center; font-size:1.2rem; margin-bottom:.75rem; }
+  .eco-tile { border-radius:1rem; overflow:hidden; background:#fff; border:1px solid #e7e2d4; }
+  .eco-tile .ph { height:110px; }
+  .testimonio { background:#fff; border-radius:.75rem; padding:1.25rem; border:1px solid #e7e2d4; }
+  .accordion-button:not(.collapsed) { background:#EFEADC; color:var(--forest); }
+  .whatsapp-fab { position:fixed; bottom:16px; right:16px; width:44px; height:44px; border-radius:50%; background:#25D366; color:#fff; display:flex; align-items:center; justify-content:center; font-size:1.2rem; box-shadow:0 4px 10px rgba(0,0,0,.2); }
+  footer.bv-footer { background:var(--forest); color:#E7EFE3; }
+  footer.bv-footer h6 { font-size:.7rem; letter-spacing:.08em; color:var(--sage); }
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-bv px-4 py-3 d-flex justify-content-between align-items-center">
+  <span class="d-flex align-items-center gap-2 fw-bold serif fs-5">🌱 Buen Vivir</span>
+  <div class="d-none d-md-flex gap-4">
+    <span>Servicios</span><span>Ecosistema</span><span>Sobre Belén</span><span>Contacto</span>
+  </div>
+  <div class="d-flex align-items-center gap-2">
+    <span class="badge bg-dark badge-demo">MAQUETA · DATOS DE EJEMPLO</span>
+    <span class="lang-pill">ES / EN</span>
+  </div>
+</nav>
+
+<div class="hero-bv text-center">
+  <div class="container">
+    <div class="small text-uppercase fw-bold mb-2" style="letter-spacing:.15em; color:var(--forest)">Consultoría Regenerativa</div>
+    <h1 class="serif mb-3" style="font-size:2.3rem; max-width:680px; margin:0 auto;">Acompañamos procesos de regeneración organizacional y personal</h1>
+    <p class="text-muted mb-4" style="max-width:520px; margin:0 auto;">Facilitación, pensamiento sistémico y Teoría U, desde la cosmovisión del Buen Vivir.</p>
+    <div class="d-flex gap-2 justify-content-center flex-wrap">
+      <button class="btn btn-forest px-4">📅 Agendar una llamada</button>
+      <button class="btn btn-outline-forest px-4">💬 WhatsApp</button>
+    </div>
+  </div>
+</div>
+
+<div class="container py-5">
+  <h2 class="serif text-center mb-5" style="font-size:1.7rem">Tres caminos, siete servicios</h2>
+  <div class="row g-3">
+    <div class="col-md-4">
+      <div class="camino-card">
+        <div class="icon">👥</div>
+        <div class="fw-bold mb-1">Revitaliza tu Equipo</div>
+        <div class="small text-muted">Regeneración de Equipos · Liderazgo Regenerativo</div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="camino-card">
+        <div class="icon">🌿</div>
+        <div class="fw-bold mb-1">Revitaliza tu Trabajo</div>
+        <div class="small text-muted">Regeneración para Emprendedores · Introducción a la Teoría U</div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="camino-card">
+        <div class="icon">🌳</div>
+        <div class="fw-bold mb-1">Revitaliza tu Vida</div>
+        <div class="small text-muted">Regeneración Personal · Creatividad · Para Profesionales</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container py-5">
+  <h2 class="serif text-center mb-5" style="font-size:1.7rem">Ecosistema comunitario</h2>
+  <div class="row g-3">
+    <div class="col-md-4">
+      <div class="eco-tile">
+        <div class="ph" style="background:linear-gradient(135deg,#8FAF8B,#3A5A40)"></div>
+        <div class="p-3">
+          <div class="fw-bold small">Casita del Árbol</div>
+          <div class="text-muted" style="font-size:.75rem">Espacio abierto de la comunidad</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="eco-tile">
+        <div class="ph" style="background:linear-gradient(135deg,#B9875A,#7A5A3A)"></div>
+        <div class="p-3">
+          <div class="fw-bold small">Regeneración Personal</div>
+          <div class="text-muted" style="font-size:.75rem">Grupo con pre-inscripción</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="eco-tile">
+        <div class="ph" style="background:linear-gradient(135deg,#DCE6D6,#8FAF8B)"></div>
+        <div class="p-3">
+          <div class="fw-bold small">Regeneración y Creatividad</div>
+          <div class="text-muted" style="font-size:.75rem">Grupo con pre-inscripción</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container py-5">
+  <h2 class="serif text-center mb-4" style="font-size:1.7rem">Testimonios</h2>
+  <div class="row g-3">
+    <div class="col-md-6">
+      <div class="testimonio">
+        <div class="small text-muted mb-2">★★★★★</div>
+        <div class="small">"Un proceso que transformó la forma en que nuestro equipo toma decisiones." — Participante, Ejemplo A</div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="testimonio">
+        <div class="small text-muted mb-2">★★★★★</div>
+        <div class="small">"Claridad y acompañamiento real en un momento de cambio personal." — Participante, Ejemplo B</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container pb-5">
+  <h2 class="serif text-center mb-4" style="font-size:1.7rem">Preguntas frecuentes</h2>
+  <div class="accordion" id="faq">
+    <div class="accordion-item">
+      <h2 class="accordion-header"><button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#q1">¿Cómo empiezo?</button></h2>
+      <div id="q1" class="accordion-collapse collapse show" data-bs-parent="#faq"><div class="accordion-body small text-muted">Agenda una llamada inicial sin costo para conversar sobre tu proceso.</div></div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#q2">¿Trabajan en inglés?</button></h2>
+      <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body small text-muted">Sí, todo el sitio y los procesos están disponibles en español e inglés.</div></div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#q3">¿Cómo me uno a la comunidad?</button></h2>
+      <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body small text-muted">Casita del Árbol está abierta; los grupos de regeneración piden pre-inscripción.</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="text-center py-5" style="background:#EFEADC">
+  <h3 class="serif mb-3">Conversemos sobre tu proceso</h3>
+  <div class="d-flex gap-2 justify-content-center flex-wrap">
+    <input class="form-control" style="max-width:280px" placeholder="tu@email.com" />
+    <button class="btn btn-forest px-4">Suscribirme al newsletter</button>
+  </div>
+</div>
+
+<footer class="bv-footer py-5">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-6 col-md-3">
+        <h6>CAMINOS</h6>
+        <div class="small">Equipo</div>
+        <div class="small">Trabajo</div>
+        <div class="small">Vida</div>
+      </div>
+      <div class="col-6 col-md-3">
+        <h6>ECOSISTEMA</h6>
+        <div class="small">Casita del Árbol</div>
+        <div class="small">Regeneración Personal</div>
+      </div>
+      <div class="col-6 col-md-3">
+        <h6>LEGAL</h6>
+        <div class="small">Privacidad</div>
+        <div class="small">Términos</div>
+      </div>
+      <div class="col-6 col-md-3">
+        <h6>REDES</h6>
+        <div class="small">Instagram · LinkedIn</div>
+        <div class="small">TikTok · YouTube</div>
+      </div>
+    </div>
+    <hr class="border-secondary my-4">
+    <div class="small" style="color:#C8D6C2">Buen Vivir · Consultoría Regenerativa, Argentina.</div>
+  </div>
+</footer>
+
+<div class="whatsapp-fab">💬</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
