@@ -1,5 +1,5 @@
 <template>
-  <footer id="contacto" class="bg-ink text-paper py-24">
+  <footer class="bg-ink text-paper py-24">
     <div class="max-w-7xl mx-auto px-6">
       <div class="reveal grid md:grid-cols-2 gap-16 items-start">
         <div>

@@ -8,6 +8,7 @@ import TechStack from '../components/TechStack.vue';
 import AboutMe from '../components/AboutMe.vue';
 import FaqSection from '../components/FaqSection.vue';
 import StatsStrip from '../components/StatsStrip.vue';
+import ContactForm from '../components/ContactForm.vue';
 import { useReveal } from '../composables/useReveal';
 
 useReveal();
@@ -97,6 +98,8 @@ const photoMissing = ref(false);
   <div class="h-2 bg-gradient-to-r from-gold-dark via-gold-light to-gold-dark"></div>
 
   <FaqSection />
+
+  <ContactForm />
 
   <!-- Methodology Section -->
   <section id="metodologia" class="py-24 bg-gold">
