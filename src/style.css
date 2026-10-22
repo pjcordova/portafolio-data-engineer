@@ -25,9 +25,10 @@ html {
      reveals this instead of a jarring flash of plain white above the header. */
   background-color: #FAF8F4;
   overscroll-behavior-y: none;
-  /* Keeps the fixed nav (85px tall) from covering a section's heading
-     when jumping to it via #hash link or the router's scrollBehavior. */
-  scroll-padding-top: 85px;
+  /* Keeps the fixed nav (85px tall, plus the iOS status-bar safe area)
+     from covering a section's heading when jumping to it via #hash link
+     or the router's scrollBehavior. */
+  scroll-padding-top: calc(85px + env(safe-area-inset-top));
 }
 ::-webkit-scrollbar {
   width: 10px;
