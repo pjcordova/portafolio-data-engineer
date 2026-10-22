@@ -21,6 +21,10 @@
 html {
   scrollbar-width: thin;
   scrollbar-color: rgba(19, 18, 16, 0.25) transparent;
+  /* Matches the nav's own background so mobile rubber-band overscroll
+     reveals this instead of a jarring flash of plain white above the header. */
+  background-color: #FAF8F4;
+  overscroll-behavior-y: none;
 }
 ::-webkit-scrollbar {
   width: 10px;
@@ -40,6 +44,7 @@ html {
 /* Subtle grain so flat gradients don't read as flat/generic. */
 body {
   position: relative;
+  overscroll-behavior-y: none;
 }
 body::before {
   content: '';
