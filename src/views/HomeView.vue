@@ -91,7 +91,7 @@ const photoMissing = ref(false);
     </div>
   </section>
 
-  <div class="h-[3px] bg-gradient-to-r from-gold-dark via-gold-light to-gold-dark"></div>
+  <div class="h-2 bg-gradient-to-r from-gold-dark via-gold-light to-gold-dark"></div>
 
   <FaqSection />
 
