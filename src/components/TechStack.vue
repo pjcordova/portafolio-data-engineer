@@ -32,9 +32,12 @@ const categories = [
 <template>
   <section class="reveal py-20 bg-accent-700 overflow-hidden">
     <div class="max-w-7xl mx-auto px-6">
-      <p class="text-center text-xs font-bold tracking-[0.2em] text-paper/50 uppercase mb-12">
-        Tecnologías con las que trabajo
+      <p class="text-center text-xs font-bold tracking-[0.2em] text-paper/50 uppercase mb-4">
+        Stack Técnico
       </p>
+      <h2 class="text-center text-3xl md:text-4xl font-bold text-paper mb-12">
+        Tecnologías con las que <span class="font-serif italic font-normal text-gold-light">trabajo</span>
+      </h2>
       <div class="grid sm:grid-cols-3 gap-5 max-w-5xl mx-auto">
         <div v-for="category in categories" :key="category.label"
              class="bg-paper border border-ink/5 shadow-xl shadow-ink/10 rounded-2xl p-7">
