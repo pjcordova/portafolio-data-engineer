@@ -12,7 +12,7 @@ defineProps<{
     <div class="h-48 overflow-hidden bg-paper relative">
       <img :src="project.ilustracion"
            :alt="`Ilustración referencial: ${project.nombre}`"
-           class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+           class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
       <span v-if="project.status"
             class="absolute top-3 right-3 px-2.5 py-0.5 rounded-full text-[11px] font-semibold"
             :class="project.status === 'Completado' ? 'bg-emerald-50 text-emerald-700 border border-emerald-200' : 'bg-amber-50 text-amber-700 border border-amber-200'">

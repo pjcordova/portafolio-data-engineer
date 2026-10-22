@@ -4,6 +4,11 @@ export default {
     "./index.html",
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
+  future: {
+    // hover:/group-hover: only apply on devices that actually support hover
+    // (prevents hover states sticking on tap on touch screens).
+    hoverOnlyWhenSupported: true,
+  },
   theme: {
     extend: {
       colors: {

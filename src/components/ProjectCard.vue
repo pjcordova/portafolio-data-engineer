@@ -13,7 +13,7 @@ defineProps<{
       <div class="w-full lg:w-56 h-40 lg:h-auto flex-shrink-0 overflow-hidden bg-paper">
         <img :src="project.ilustracion"
              :alt="`Ilustración referencial: ${project.nombre}`"
-             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+             class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
       </div>
 
       <div class="p-8 flex-1">

@@ -67,4 +67,9 @@ body::before {
     transform: none;
     transition: none;
   }
+  .animate-fade-up {
+    animation: none !important;
+    opacity: 1;
+    transform: none;
+  }
 }

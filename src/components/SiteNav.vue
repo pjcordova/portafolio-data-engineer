@@ -22,16 +22,36 @@ const menuOpen = ref(false);
         aria-label="Abrir menú"
         :aria-expanded="menuOpen"
         @click="menuOpen = !menuOpen">
-        <span class="block w-6 h-[1.5px] bg-ink transition-transform duration-300 origin-center"
+        <span class="block w-6 h-[1.5px] bg-ink transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] origin-center"
               :class="menuOpen ? 'rotate-45 translate-y-[3px]' : ''"></span>
-        <span class="block w-6 h-[1.5px] bg-ink transition-transform duration-300 origin-center"
+        <span class="block w-6 h-[1.5px] bg-ink transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] origin-center"
               :class="menuOpen ? '-rotate-45 -translate-y-[3px]' : ''"></span>
       </button>
     </div>
-    <div v-show="menuOpen" class="md:hidden border-t border-ink/10 bg-paper px-6 py-4 flex flex-col gap-4 text-sm font-medium">
-      <RouterLink :to="{ path: '/', hash: '#metodologia' }" class="nav-link" @click="menuOpen = false">Metodología</RouterLink>
-      <RouterLink :to="{ path: '/', hash: '#proyectos' }" class="nav-link" @click="menuOpen = false">Casos de Éxito</RouterLink>
-      <RouterLink :to="{ path: '/', hash: '#contacto' }" class="nav-link" @click="menuOpen = false">Contacto</RouterLink>
-    </div>
+    <Transition name="mobile-menu">
+      <div v-show="menuOpen" class="md:hidden border-t border-ink/10 bg-paper px-6 py-4 flex flex-col gap-4 text-sm font-medium">
+        <RouterLink :to="{ path: '/', hash: '#metodologia' }" class="nav-link" @click="menuOpen = false">Metodología</RouterLink>
+        <RouterLink :to="{ path: '/', hash: '#proyectos' }" class="nav-link" @click="menuOpen = false">Casos de Éxito</RouterLink>
+        <RouterLink :to="{ path: '/', hash: '#contacto' }" class="nav-link" @click="menuOpen = false">Contacto</RouterLink>
+      </div>
+    </Transition>
   </nav>
 </template>
+
+<style scoped>
+.mobile-menu-enter-active,
+.mobile-menu-leave-active {
+  transition: opacity 200ms cubic-bezier(0.16, 1, 0.3, 1), transform 200ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.mobile-menu-enter-from,
+.mobile-menu-leave-to {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+@media (prefers-reduced-motion: reduce) {
+  .mobile-menu-enter-active,
+  .mobile-menu-leave-active {
+    transition: none;
+  }
+}
+</style>
