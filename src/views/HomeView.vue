@@ -69,6 +69,8 @@ const photoMissing = ref(false);
 
   <TechStack />
 
+  <FaqSection />
+
   <!-- Methodology Section -->
   <section id="metodologia" class="py-24 bg-gold">
     <div class="max-w-7xl mx-auto px-6">
@@ -120,8 +122,6 @@ const photoMissing = ref(false);
       </div>
     </div>
   </section>
-
-  <FaqSection />
 
   <SiteFooter />
 </template>
