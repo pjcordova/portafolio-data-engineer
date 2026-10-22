@@ -37,8 +37,8 @@ const categories = [
       </p>
       <div class="grid sm:grid-cols-3 gap-5 max-w-5xl mx-auto">
         <div v-for="category in categories" :key="category.label"
-             class="bg-paper/[0.07] backdrop-blur-sm border border-paper/10 rounded-2xl p-7">
-          <h3 class="text-xs font-bold tracking-[0.15em] text-paper uppercase mb-5 pb-3 border-b border-paper/15">
+             class="bg-paper border border-ink/5 shadow-xl shadow-ink/10 rounded-2xl p-7">
+          <h3 class="text-xs font-bold tracking-[0.15em] text-ink uppercase mb-5 pb-3 border-b border-ink/10">
             {{ category.label }}
           </h3>
           <div class="space-y-3.5">
@@ -48,7 +48,7 @@ const categories = [
                    viewBox="0 0 24 24" :fill="tech.color">
                 <path :d="tech.d" />
               </svg>
-              <span class="text-sm font-medium text-paper/80">
+              <span class="text-sm font-medium text-ink/70">
                 {{ tech.name }}
               </span>
             </div>
