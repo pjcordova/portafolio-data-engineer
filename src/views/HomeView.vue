@@ -131,5 +131,7 @@ const photoMissing = ref(false);
 
   <ContactForm />
 
+  <div class="h-2 bg-gradient-to-r from-gold-dark via-gold-light to-gold-dark"></div>
+
   <SiteFooter />
 </template>
