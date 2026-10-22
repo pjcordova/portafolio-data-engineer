@@ -17,41 +17,43 @@ function handleSubmit() {
 </script>
 
 <template>
-  <section id="contacto" class="reveal py-24 bg-paper">
+  <section id="contacto" class="reveal py-14 bg-accent-700">
     <div class="max-w-2xl mx-auto px-6">
-      <div class="text-center mb-14">
-        <h2 class="text-sm font-bold tracking-[0.2em] text-accent-600 uppercase mb-4">Hablemos</h2>
-        <h3 class="text-3xl md:text-4xl font-bold text-ink">
-          Cuéntame de <span class="font-serif italic text-accent-600 font-normal">tu proyecto</span>
+      <div class="text-center mb-8">
+        <h2 class="text-sm font-bold tracking-[0.2em] text-paper/50 uppercase mb-3">Hablemos</h2>
+        <h3 class="text-2xl md:text-3xl font-bold text-paper">
+          Cuéntame de <span class="font-serif italic text-gold-light font-normal">tu proyecto</span>
         </h3>
       </div>
 
-      <form class="space-y-5" @submit.prevent="handleSubmit">
-        <div>
-          <label for="contact-name" class="block text-sm font-bold text-ink mb-2">Nombre</label>
-          <input id="contact-name" v-model="name" type="text" required
-                 class="w-full px-4 py-3 bg-white border border-ink/15 rounded-lg text-ink placeholder:text-ink/30 focus:outline-none focus:border-accent-500 transition-colors"
-                 placeholder="Tu nombre" />
+      <form class="space-y-4" @submit.prevent="handleSubmit">
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div>
+            <label for="contact-name" class="block text-xs font-bold text-paper/70 mb-1.5">Nombre</label>
+            <input id="contact-name" v-model="name" type="text" required
+                   class="w-full px-3.5 py-2.5 bg-paper border border-paper/20 rounded-lg text-ink placeholder:text-ink/30 focus:outline-none focus:border-gold-light transition-colors"
+                   placeholder="Tu nombre" />
+          </div>
+          <div>
+            <label for="contact-email" class="block text-xs font-bold text-paper/70 mb-1.5">Correo</label>
+            <input id="contact-email" v-model="email" type="email" required
+                   class="w-full px-3.5 py-2.5 bg-paper border border-paper/20 rounded-lg text-ink placeholder:text-ink/30 focus:outline-none focus:border-gold-light transition-colors"
+                   placeholder="tu@correo.com" />
+          </div>
         </div>
         <div>
-          <label for="contact-email" class="block text-sm font-bold text-ink mb-2">Correo</label>
-          <input id="contact-email" v-model="email" type="email" required
-                 class="w-full px-4 py-3 bg-white border border-ink/15 rounded-lg text-ink placeholder:text-ink/30 focus:outline-none focus:border-accent-500 transition-colors"
-                 placeholder="tu@correo.com" />
-        </div>
-        <div>
-          <label for="contact-message" class="block text-sm font-bold text-ink mb-2">Mensaje</label>
-          <textarea id="contact-message" v-model="message" required rows="5"
-                    class="w-full px-4 py-3 bg-white border border-ink/15 rounded-lg text-ink placeholder:text-ink/30 focus:outline-none focus:border-accent-500 transition-colors resize-none"
+          <label for="contact-message" class="block text-xs font-bold text-paper/70 mb-1.5">Mensaje</label>
+          <textarea id="contact-message" v-model="message" required rows="3"
+                    class="w-full px-3.5 py-2.5 bg-paper border border-paper/20 rounded-lg text-ink placeholder:text-ink/30 focus:outline-none focus:border-gold-light transition-colors resize-none"
                     placeholder="Cuéntame qué necesitas resolver..."></textarea>
         </div>
 
         <button type="submit"
-                class="btn-press w-full px-8 py-4 bg-accent-600 text-paper rounded-lg font-bold shadow-lg shadow-accent-600/20 hover:bg-accent-700 transition-colors">
+                class="btn-press w-full px-8 py-3 bg-gold text-ink rounded-lg font-bold shadow-lg shadow-ink/20 hover:bg-gold-light transition-colors">
           Enviar mensaje
         </button>
 
-        <p v-if="sent" class="text-center text-sm text-ink/50">
+        <p v-if="sent" class="text-center text-sm text-paper/50">
           Se abrió tu cliente de correo con el mensaje listo — solo dale enviar.
         </p>
       </form>
