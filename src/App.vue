@@ -1,6 +1,11 @@
+<script setup lang="ts">
+import WhatsAppFab from './components/WhatsAppFab.vue';
+</script>
+
 <template>
   <div class="min-h-screen bg-paper text-ink font-sans">
     <RouterView />
+    <WhatsAppFab />
   </div>
 </template>
 

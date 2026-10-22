@@ -7,6 +7,7 @@ import SiteFooter from '../components/SiteFooter.vue';
 import TechStack from '../components/TechStack.vue';
 import AboutMe from '../components/AboutMe.vue';
 import FaqSection from '../components/FaqSection.vue';
+import StatsStrip from '../components/StatsStrip.vue';
 import { useReveal } from '../composables/useReveal';
 
 useReveal();
@@ -64,6 +65,8 @@ const photoMissing = ref(false);
       </div>
     </div>
   </header>
+
+  <StatsStrip />
 
   <AboutMe />
 
