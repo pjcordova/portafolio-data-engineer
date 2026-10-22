@@ -35,10 +35,12 @@ function toggle(i: number) {
   <section id="faq" class="reveal py-24 bg-accent-700">
     <div class="max-w-3xl mx-auto px-6">
       <div class="text-center mb-14">
-        <h2 class="text-sm font-bold tracking-[0.2em] text-paper/50 uppercase mb-4">Preguntas Frecuentes</h2>
-        <h3 class="text-3xl md:text-4xl font-bold text-paper">
-          Antes de <span class="font-serif italic text-gold-light font-normal">escribirme</span>
-        </h3>
+        <div class="inline-block bg-paper rounded-2xl px-10 py-7 shadow-xl shadow-ink/20">
+          <h2 class="text-sm font-bold tracking-[0.2em] text-accent-600 uppercase mb-3">Preguntas Frecuentes</h2>
+          <h3 class="text-3xl md:text-4xl font-bold text-ink">
+            Antes de <span class="font-serif italic text-accent-600 font-normal">escribirme</span>
+          </h3>
+        </div>
       </div>
 
       <div class="divide-y divide-paper/10 border-y border-paper/10">
