@@ -5,7 +5,7 @@ const menuOpen = ref(false);
 </script>
 
 <template>
-  <nav class="fixed top-0 inset-x-0 z-50 bg-paper border-b-2 border-gold">
+  <nav class="fixed top-0 inset-x-0 z-50 bg-paper border-b-2 border-gold transform-gpu will-change-transform [backface-visibility:hidden]">
     <div class="h-[3px] bg-gradient-to-r from-gold-dark via-gold-light to-gold-dark"></div>
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       <RouterLink to="/" class="flex items-center gap-2.5 text-xl font-bold tracking-tighter text-ink">
