@@ -125,8 +125,6 @@ const photoMissing = ref(false);
     </div>
   </section>
 
-  <div class="h-2 bg-gradient-to-r from-gold-dark via-gold-light to-gold-dark"></div>
-
   <FaqSection />
 
   <ContactForm />
