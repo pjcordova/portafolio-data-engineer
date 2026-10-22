@@ -66,9 +66,9 @@ const photoMissing = ref(false);
     </div>
   </header>
 
-  <StatsStrip />
-
   <AboutMe />
+
+  <StatsStrip />
 
   <TechStack />
 
