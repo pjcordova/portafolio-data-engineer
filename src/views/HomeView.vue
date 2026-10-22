@@ -9,6 +9,7 @@ import AboutMe from '../components/AboutMe.vue';
 import FaqSection from '../components/FaqSection.vue';
 import StatsStrip from '../components/StatsStrip.vue';
 import ContactForm from '../components/ContactForm.vue';
+import TestimoniosSection from '../components/TestimoniosSection.vue';
 import { useReveal } from '../composables/useReveal';
 
 useReveal();
@@ -98,6 +99,8 @@ const photoMissing = ref(false);
   <div class="h-2 bg-gradient-to-r from-gold-dark via-gold-light to-gold-dark"></div>
 
   <FaqSection />
+
+  <TestimoniosSection />
 
   <ContactForm />
 
